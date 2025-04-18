@@ -1,0 +1,49 @@
+.contact-section {
+    background: var(--bg-body);
+    padding-bottom: 5.625rem;
+    padding-top: 1rem;
+    .all-info {
+        display: flex;
+        gap: 4.75rem;
+        align-items: flex-start;
+        justify-content: space-between;
+    
+        @include desktop-small {
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: center
+        }
+    
+        .contact {
+            display: flex;
+            gap: 1.375rem;
+    
+            @include desktop-small {
+                flex-direction: column;
+                gap: 1.375rem;
+                align-items: center;
+            }
+    
+            .content {
+                display: flex;
+                flex-direction: column;
+                max-width: 402px;
+                width: 100%;
+                
+                @include desktop-small {
+                    text-align: center;
+                }
+
+                p {
+                    @include typography(text-xl, regular);
+                    color: var(--color-text-light);
+                }
+
+                h5 {
+                    @include typography(text-xl, bold);
+                    color: var(--color-text-dark);
+                }
+            }
+        }
+    }
+}

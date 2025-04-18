@@ -1,0 +1,279 @@
+.hero-section {
+  background: #0F2028;
+  background-image: url(../../images/hero-bg.png);
+  margin-top: -10.1rem;
+  padding-top: 12rem;
+  padding-bottom: 4rem;
+  color: var(--color-white);
+  position: relative;
+  z-index: 2;
+
+  @include desktop-small {
+    margin-top: 0rem;
+    padding-top: 11rem;
+  }
+
+  .hero-wrapper {
+
+    display: flex;
+    gap: 2rem;
+    
+    .text-contents {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 28px;
+
+      @include desktop-xl {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include desktop-lg {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include desktop-small {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .top-content {
+        display: flex;
+        flex-direction: column;    
+
+        @include desktop-xl {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @include desktop-lg {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @include desktop-small {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .hero-title {
+          color: var(--color-white);
+          font-family: var(--secondary-font);
+          @include typography("display-xl", "bold");
+          margin-bottom: 20px;
+
+          @include desktop-xl {
+            @include typography("display-md", "bold");
+            word-wrap: break-word;
+          }
+
+          @include desktop-lg {
+            @include typography("display-md", "bold");
+            word-wrap: break-word;
+          }
+   
+          @include desktop-small {
+            @include typography("display-md", "bold");
+            word-wrap: break-word;
+          }
+  
+        }
+  
+        p {
+          @include typography("text-lg", "regular");
+          margin-bottom: 40px;
+          color: var(--color-white);
+          max-width: 530px;
+  
+          @include desktop-small {
+            @include typography("text-md", "regular");
+          }
+        }
+      }
+
+      
+
+      .actions {
+        display: flex;
+        gap: 1rem;
+
+        @include desktop-small {
+          flex-direction: column;
+        }
+
+        .hero-btn{
+          text-decoration: none;
+          padding: 12px 24px;
+          @include typography('text-lg', 'semibold');
+          font-family: var(--default-font);       
+          border-radius: 30px; 
+          transition: 1s ease-in-out;         
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .hero-open-btn{      
+          color: var(--color-text-dark);
+          background: var(--color-secondary);
+          
+          &:hover {
+            background: var(--color-white);
+          }
+        }
+
+        .hero-learn-btn{       
+          color: var(--color-text-dark);
+          background: var(--color-white);
+
+          &:hover {
+            background: var(--color-secondary);
+          }
+        }
+      }
+
+      .trusted_area {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        justify-items: flex-end;
+
+        h2 {
+          @include typography('text-xl', medium);
+        }
+
+        .trusted_images {
+          
+          display: flex;
+          gap: 16px;
+        }
+      }
+    }
+
+    .right-contents {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      width: 50%;
+
+      @include desktop-xl {
+        display: none;
+      }
+
+      @include desktop-lg {
+        display: none;
+      }
+
+      @include desktop-small {
+        display: none;
+      }
+
+      .hero-image-overlay {
+        position: absolute;
+        right: -32px;
+        bottom: 0;
+      }
+
+      .hero-image-overlay-chart {
+        position: absolute;
+        right: 12%;
+        bottom: 4%;
+
+        background: var(--color-white);
+        padding: 1rem;
+        border-radius: 4.986px;
+      }
+
+      .right-top {
+        display: flex;
+        gap: 10px;
+
+        .right-top-left {
+          width: 280px;
+          height: 180px;
+          border-radius: 24px;
+          background: #CFEFEF;
+          color: var(--color-text-dark);
+          padding: 1.5rem;
+
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          h3 {
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 48px; /* 96% */
+            font-family: var(--secondary-font);
+          }
+
+          p {
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px; /* 136.364% */
+          }
+        }
+
+        .right-top-right {
+          width: 280px;
+          height: 180px;
+          border-radius: 24px;
+          background: #4B9271;
+          padding: 1.5rem;
+
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-end;
+          justify-content: center;
+
+          p {
+            color: var(--color-white);
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px; /* 136.364% */
+          }
+
+          h3 {
+            color: var(--color-secondary);
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 48px; /* 96% */
+          }
+        }
+
+      }
+
+      .right-bottom {
+        width: 576px;
+        height: 370px;
+        border-radius: 24px;
+        background: #E0E9E9;
+
+        background-image: url(../../images/img-behind-shape.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+    }
+
+    
+  }
+}

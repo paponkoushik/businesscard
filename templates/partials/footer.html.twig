@@ -1,0 +1,37 @@
+{% set links = config.site.footer.links %}
+
+{% set landingLinks = links[:3] %}
+{% set privacyLinks = links[3:] %}
+
+{% include 'widgets/footer-overlay.html.twig' %}
+
+<footer class="footer-section slide-up">
+
+	<div class="container">
+
+		<div class="footer-logo-container">
+			<div class="footer-logo-top">
+				<div class="footer-logo-area">
+					{% include 'widgets/logo.html.twig' with { position: 'footer' } %}
+
+					{% set homepage = page.find('/') %}
+    				<p class="branding-text service-description">{{ homepage.content|raw }}</p>
+					{# <p class="branding-text service-description">{{ page.find('/home').header.footer.branding_text.translatable }}</p> #}
+					
+				</div>
+				
+				{% include 'widgets/footer-link.html.twig' %}
+				{% include 'widgets/footer-privacy-link.html.twig' %}
+
+				{% include 'widgets/footer-card.html.twig' %}
+			</div>
+
+			{% include 'widgets/footer-copyright.html.twig' %}
+		</div>
+	</div>
+	
+</footer>
+
+<style>
+	{% include 'partials/custom.css.twig' %}
+</style>

@@ -1,0 +1,93 @@
+title: Hero
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+
+          fields:
+            content:
+              unset@: true
+            header.media_order:
+                ordering@: 99
+            hero_section:
+              type: section
+              title: Hero Section
+              underline: true
+              fields:
+                header.hero.title.translatable:
+                  type: text
+                  label: Hero Title
+                  classes: 'translatable'
+
+                header.hero.text.translatable:
+                  type: textarea
+                  label: Hero Text
+                  classes: 'translatable'
+
+                header.hero.hero_open_ac_btn_text.translatable:
+                  type: text
+                  label: Hero Open Account BTN
+                  classes: 'translatable'
+
+                header.hero.hero_open_ac_btn_link:
+                  type: text
+                  label: Hero Open Account BTN URL
+
+                header.hero.hero_learn_more_btn_text.translatable:
+                  type: text
+                  label: Hero Learn More BTN Text
+                  classes: 'translatable'
+
+                header.hero.hero_learn_more_btn_link:
+                  type: text
+                  label: Hero Learn More BTN URL
+
+                header.hero.trusted_by_title.translatable:
+                  type: text
+                  label: Trusted Title
+                  classes: 'translatable'
+
+                header.hero.trusted_by_images:
+                  type: list
+                  label: Trusted By Image
+                  fields:
+                    .image:
+                      type: pagemediaselect
+                      label: Image
+                      preview_images: true
+
+                header.hero_users_section:
+                    # ordering@: 4
+                    type: section
+                    title: Hero Users Section
+                    underline: true
+                    fields:
+
+                      header.hero.user.image:
+                        type: pagemediaselect
+                        label: Hero Main image
+                        preview_images: true
+
+                      header.hero.user.rating.translatable:
+                        type: text
+                        label: Rating
+                        classes: 'translatable'
+
+                      header.hero.user.rating_text.translatable:
+                        type: text
+                        label: Rating Text
+                        classes: 'translatable'
+
+                      header.hero.user.user_text.translatable:
+                        type: text
+                        label: User Text
+                        classes: 'translatable'
+
+                      header.hero.user.user_count.translatable:
+                        type: text
+                        label: User Count
+                        classes: 'translatable'
+       

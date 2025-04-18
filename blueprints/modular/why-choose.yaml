@@ -1,0 +1,52 @@
+title: Why Choose
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            module_section:
+              ordering@: 3
+              type: section
+              title: Why Choose blocks
+              underline: true
+              fields:
+                header.module.title.translatable:
+                  type: text
+                  label: Title
+                  classes: 'translatable'
+
+                header.module.image:
+                  type: pagemediaselect
+                  label: Image
+                  preview_images: true
+
+                header.module.image_small:
+                  type: pagemediaselect
+                  label: Image Small
+                  preview_images: true
+
+            header.why_choose_section:
+              ordering@: 4
+              type: section
+              title: Why Choose Item
+              underline: false
+              label: false
+              fields:
+                header.why_choose:
+                  type: list
+                  fields:
+                    .title.translatable:
+                      type: text
+                      label: Title
+                      classes: 'translatable'
+                    .icon:
+                      type: pagemediaselect
+                      label: icon
+            header.media_order:
+                ordering@: 99
+
+

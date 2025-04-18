@@ -1,0 +1,96 @@
+{% extends 'partials/variables.html.twig' %}
+
+{% set contents = page.header.hero %}
+{% set user_data = page.header.hero.user %}
+
+{% block render_block %}
+
+	<section class="hero-section" id="hero-section">
+
+		<div class="container">
+			<div class="hero-wrapper" >
+
+				<div class="text-contents">		
+
+					<div class="top-content">
+
+						{% if contents.title != null %}
+							<h1 class="hero-title">{{ contents.title.translatable|raw }}</h1>
+						{% endif %}
+					
+						{% if contents.text != null %}
+							<p>{{ contents.text.translatable|raw }}</p>
+						{% endif %}
+					</div>		
+
+					{% if contents.hero_open_ac_btn_text != null %}
+						<div class="actions">
+							{% if contents.hero_open_ac_btn_text != null %}
+								<a href="{{ home_url|e }}{{ webdata('signup_url') }}" class="hero-btn hero-open-btn">
+									{{ contents.hero_open_ac_btn_text.translatable }}
+								</a>
+							{% endif %}
+
+							{% if contents.hero_learn_more_btn_text != null %}
+								<a href="{{ '/' ~ grav.language.getActive }}/about-us" class="hero-btn hero-learn-btn">
+									{{ contents.hero_learn_more_btn_text.translatable }}
+								</a>
+							{% endif %}
+						</div>
+					{% endif %}
+
+					<div class="trusted_area">
+						<h2>{{ contents.trusted_by_title.translatable }}</h2>
+
+						<div class="trusted_images">
+							{% for trusted in contents.trusted_by_images %}
+								<img src="{{ page.media[trusted.image].url }}" alt="Trusted Image" />
+							{% endfor %}
+						</div>
+					</div>
+
+				</div>
+
+				<div class="right-contents">
+
+					<img class="hero-image-overlay" src="{{ page.media[user_data.image].url }}" alt="Hero Image" />
+					<img class="hero-image-overlay-chart" src="{{ url('theme://images/hero-circle-chart.svg') }}" alt="Hero Image" />
+
+					<div class="right-top">
+
+						<div class="right-top-left">
+							<h3>
+								{{ user_data.rating.translatable }} 
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="45" height="46" viewBox="0 0 45 46" fill="none">
+								<circle cx="22.5" cy="23" r="22.5" fill="#BFD7D7"/>
+								<path d="M33.0961 14.5896C31.8537 13.2421 30.149 12.5 28.2956 12.5C26.9102 12.5 25.6415 12.938 24.5245 13.8017C23.9609 14.2377 23.4502 14.7711 23 15.3936C22.5499 14.7712 22.0391 14.2377 21.4753 13.8017C20.3585 12.938 19.0898 12.5 17.7044 12.5C15.851 12.5 14.1461 13.2421 12.9037 14.5896C11.6762 15.9213 11 17.7407 11 19.7127C11 21.7424 11.7564 23.6004 13.3804 25.56C14.8331 27.3129 16.9211 29.0923 19.339 31.1528C20.1646 31.8565 21.1005 32.654 22.0722 33.5037C22.329 33.7285 22.6587 33.8524 23 33.8523C23.3415 33.8523 23.6711 33.7285 23.9274 33.504C24.8991 32.6542 25.8356 31.8563 26.6615 31.1522C29.0791 29.0921 31.167 27.3129 32.6198 25.5598C34.2438 23.6005 35 21.7424 35 19.7125C35 17.7407 34.3238 15.9213 33.0961 14.5896Z" fill="#F8EE01"/>
+								</svg>
+							</h3>
+							<p>{{ user_data.rating_text.translatable }}</p>
+						</div>
+						<div class="right-top-right">
+							<p>{{ user_data.user_text.translatable }}</p>
+							<h3>
+								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M44.8541 13.4792C45.1467 13.7722 45.3111 14.1693 45.3111 14.5834C45.3111 14.9975 45.1467 15.3946 44.8541 15.6876L28.1875 32.3542C27.8945 32.6468 27.4974 32.8112 27.0833 32.8112C26.6692 32.8112 26.2721 32.6468 25.9791 32.3542L19.4875 25.8626C19.3907 25.7656 19.2758 25.6886 19.1492 25.6361C19.0226 25.5836 18.887 25.5565 18.75 25.5565C18.6129 25.5565 18.4773 25.5836 18.3507 25.6361C18.2242 25.6886 18.1092 25.7656 18.0125 25.8626L7.35413 36.5209C7.05793 36.7969 6.66617 36.9472 6.26138 36.94C5.85658 36.9329 5.47036 36.7689 5.18409 36.4826C4.89781 36.1963 4.73383 35.8101 4.72668 35.4053C4.71954 35.0005 4.8698 34.6088 5.1458 34.3126L17.6458 21.8126C17.9388 21.52 18.3359 21.3556 18.75 21.3556C19.164 21.3556 19.5612 21.52 19.8541 21.8126L26.3458 28.3042C26.4426 28.4012 26.5575 28.4782 26.6841 28.5307C26.8106 28.5832 26.9463 28.6103 27.0833 28.6103C27.2203 28.6103 27.356 28.5832 27.4825 28.5307C27.6091 28.4782 27.724 28.4012 27.8208 28.3042L42.6458 13.4792C42.9388 13.1866 43.3359 13.0223 43.75 13.0223C44.164 13.0223 44.5612 13.1866 44.8541 13.4792Z" fill="#0DE41F"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M33.8541 14.5833C33.8541 14.1689 34.0187 13.7715 34.3118 13.4785C34.6048 13.1855 35.0022 13.0208 35.4166 13.0208H43.75C44.1644 13.0208 44.5618 13.1855 44.8548 13.4785C45.1478 13.7715 45.3125 14.1689 45.3125 14.5833V22.9167C45.3125 23.3311 45.1478 23.7285 44.8548 24.0215C44.5618 24.3146 44.1644 24.4792 43.75 24.4792C43.3356 24.4792 42.9381 24.3146 42.6451 24.0215C42.3521 23.7285 42.1875 23.3311 42.1875 22.9167V17.1875C42.1875 16.9112 42.0777 16.6463 41.8824 16.4509C41.687 16.2556 41.4221 16.1458 41.1458 16.1458H35.4166C35.0022 16.1458 34.6048 15.9812 34.3118 15.6882C34.0187 15.3952 33.8541 14.9977 33.8541 14.5833Z" fill="#0DE41F"/>
+								</svg> 
+
+								{{ user_data.user_count.translatable }}</h3>							
+						</div>
+					
+					</div>
+
+					<div class="right-bottom">
+					
+					</div>
+
+				</div>
+
+			</div>	
+		</div>	
+	</section>
+	
+{% endblock %}
+

@@ -1,0 +1,26 @@
+
+<div class="header-buttons {{ login_order }}">
+	{% if grav.user.authenticated %}
+		<a class="btn {{navbar_button_style}}" href="{{ url('/task:login.logout') }}">{{ "METRICALO.LOGOUT"|t }}</a>
+	{% else %}
+		<a class="btn active-btn {{navbar_button_style}}" href="{{ url('/login') }}">{{ "METRICALO.LOGIN"|t }}</a>
+		<a class="{{navbar_button_style}} btn signup" href="{{ home_url|e }}{{ webdata('signup_url') }}">
+			<span>{{ "METRICALO.SIGNUP"|t }}</span>
+
+			<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+			<path d="M15.8084 6.29289C15.4179 5.90237 14.7847 5.90237 14.3942 6.2929C14.0037 6.68342 14.0037 7.31659 14.3942 7.70711L17.6871 11H4.10132C3.54904 11 3.10132 11.4477 3.10132 12C3.10132 12.5523 3.54904 13 4.10132 13H17.6871L14.3942 16.2929C14.0037 16.6834 14.0037 17.3166 14.3942 17.7071C14.7848 18.0976 15.4179 18.0976 15.8085 17.7071L20.8031 12.7124C20.8215 12.6942 20.8393 12.6753 20.8563 12.6558C20.9238 12.5781 20.9774 12.4926 21.0171 12.4024C21.0709 12.2801 21.1009 12.145 21.1013 12.003V12C21.1013 11.9969 21.1013 11.9938 21.1013 11.9907C21.1001 11.865 21.0758 11.7447 21.0323 11.6341C20.9835 11.5098 20.9089 11.3933 20.8084 11.2929L15.8084 6.29289Z" fill="#15242D"/>
+			</svg>
+		</a>
+	{% endif %}
+	{% if grav.language.enabled and grav.language.languages|count > 1 %}
+		<span class="language-switcher" data-current-lang="{{ grav.language.active }}" id="open-modal"><img class="frame-29 lang-flag" src="{{ url('theme://images/lang/'~grav.language.active~'.svg') }}">
+			<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M4.45913 5.01749L0.947365 0.982514L8.01843 0.982513C8.00095 1 4.45913 5.01749 4.45913 5.01749Z" fill="#000"/>
+			</svg>
+		</span>
+	{% endif %}
+	<div id="mobile-menu-icon"></div>
+	<div class="cheeseburger-menu__close" id="cheeseburger-menu-close">
+		<span></span>
+	</div>
+</div>

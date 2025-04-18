@@ -1,0 +1,181 @@
+.text-right {
+  align-self: stretch;
+  padding: $content-padding 0;
+  background: var(--text-bg);
+
+  @include desktop-small {
+    padding: $content-padding-sm 0 !important;
+  }
+
+  .text-right-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2.5rem;
+
+    @include desktop-small {
+      flex-direction: column-reverse;
+    }
+
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 50%;
+
+      .left-top {
+        display: flex;
+        gap: 1rem;
+
+        img {
+          max-width: 614px;
+          width: 100%;
+        }
+
+        @include desktop-small {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .left {
+          padding: 30px;
+          border-radius: 24px;
+          background: var(--color-white);
+          border: 1px solid var(--color-tertiary);
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          h4 {
+            @include typography(display-xs, semibold);
+            font-family: var(--secondary-font);
+
+            @include desktop-small {
+              @include typography(display-xs, medium);
+            }
+          }
+
+          p {
+            @include typography(text-md, regular);
+          }
+        }
+
+      }
+    }
+
+
+    .text-right-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 22px;
+      flex: 50%;
+
+      @include desktop-small {
+        padding: 0px;
+        text-align: center;
+        align-items: center;
+      }
+
+      .sub-title {
+        position: relative;
+        h4 {
+          margin-left: 38px;
+          @include typography(text-lg, semibold);
+
+          &::before {
+            content: " ";
+            position: absolute;
+            height: 3px;
+            width: 20px;
+            left: 0;
+            top: 45%;
+            background: var(--color-section-subtitle);
+            border-radius: var(--border-radius);
+          }
+        }
+      }
+
+      .block-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.625rem;
+        align-self: stretch;
+        @include desktop-small {
+          align-items: center;
+        }
+        
+        h3 {
+          color: var(--color-primary);
+          font-family: var(--secondary-font);
+          @include typography(display-lg, semibold);
+          @include desktop-small {
+            @include typography(display-md, semibold);
+            text-align: center;
+          }
+
+          span{
+            color: unset;
+          }
+        }
+      }
+
+      p, li {
+        @include typography(text-lg, regular);
+        color: var(--color-text-light);
+
+        @include desktop-small {
+          @include typography(text-md, regular);
+          text-align: center;
+        }
+      }
+
+      .button {
+        background: var(--color-primary);
+        color: var(--color-white);
+      }
+
+    }
+
+    .right-buttom {
+      display: flex;
+      gap: 1rem;
+      margin-top: 18px;
+      
+
+      @include desktop-small {
+        gap: 40px;
+        flex-direction: column;
+      }
+
+      .left-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 293px;
+        @include desktop-small {
+          align-items: center;
+          max-width: 100%;
+        }
+
+        h4 {
+          @include typography(text-xl, medium);
+          color: var(--color-primary);
+          font-family: var(--secondary-font);
+        }
+
+        p, li {
+          @include typography(text-md, regular);
+          color: var(--color-text-light);
+  
+          @include desktop-small {
+            @include typography(text-sm, regular);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

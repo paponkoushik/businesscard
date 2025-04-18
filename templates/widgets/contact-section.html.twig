@@ -1,0 +1,26 @@
+{% set module = page.find('/home').header.contents %}
+
+<div class="contact-section">
+    <div class="container">
+        <div class="all-info">
+            {% for contact in module %}
+                <div class="contact">
+                    
+                    <img src="{{ url('theme://images/contact-section/c'~ loop.index ~'.svg') }}" />
+
+                    <div class="content">
+                        <p>{{ contact.title.translatable }}</p>
+                        {% if loop.index == 1 %}
+                            <h5>{{ webdata('support_phone') }}</h5>
+                        {% elseif loop.index == 2 %}
+                            <h5>{{ webdata('support_email') }}</h5>
+                        {% else %}
+                            <h5>{{ webdata('company.address') }}</h5>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>

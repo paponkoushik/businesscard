@@ -1,0 +1,134 @@
+title: Dynamic Content
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            footer_section:
+              ordering@: 3
+              type: section
+              title: Footer Overlay Section
+              underline: true
+
+              fields:
+
+                header.footer.left_sub_title.translatable:
+                  type: text
+                  label: Left Subtitle
+                  classess: 'translatable'
+
+                header.footer.left_title.translatable:
+                  type: text
+                  label: Footer Left Title
+                  classess: 'translatable'
+
+                header.footer.left_brief.translatable:
+                  type: text
+                  label: Footer Left Brief
+                  classess: 'translatable'
+
+                header.footer.left_btn_text.translatable:
+                  type: text
+                  label: Footer Left BTN Text
+                  classess: 'translatable'
+
+                header.footer.branding_text.translatable:
+                  type: text
+                  label: Branding Text
+                  classess: 'translatable'
+
+            footer_chart_section:
+              ordering@: 4
+              type: section
+              title: Footer Chart Section
+              underline: true
+
+              fields:
+
+                header.chart.right_chart_title.translatable:
+                  type: text
+                  label: Right Chart Title
+                  classess: 'translatable'
+
+                header.chart.right_chart_brief.translatable:
+                  type: textarea
+                  label: Right Chart Brief
+                  classess: 'translatable'
+
+                header.chart.right_chart_img:
+                  type: pagemediaselect
+                  label: Right Chart Image
+                  preview_images: true
+
+            footer_group_section:
+              ordering@: 5
+              type: section
+              title: Footer Group Section
+              underline: true
+
+              fields:
+
+                header.group.right_group_title.translatable:
+                  type: textarea
+                  label: Right Group Title
+                  classess: 'translatable'
+
+                header.group.right_group_brief.translatable:
+                  type: textarea
+                  label: Right Group Brief
+                  classess: 'translatable'
+                
+                header.group.right_group_img:
+                  type: pagemediaselect
+                  label: Right Group Image
+                  preview_images: true
+
+            footer_bottom_section:
+              ordering@: 6
+              type: section
+              title: Right Bottom Section
+              underline: true
+
+              fields:
+
+                header.right_bottom.title.translatable:
+                  type: text
+                  label: Right Bottom Title
+                  classess: 'translatable'
+
+                header.right_bottom.brief.translatable:
+                  type: textarea
+                  label: Right Bottom Brief
+                  classess: 'translatable'
+
+            header.contact_blocks_section:
+              ordering@: 7
+              type: section
+              title: Contact blocks
+              underline: false
+              label: false
+              fields:
+
+                header.modules:
+                  .title.translatable:
+                    type: text
+                    label: Section Title
+                    classes: 'translatable'
+
+                header.contents:
+                  type: list
+                  fields:
+                    .title.translatable:
+                      type: text
+                      label: Title
+                      classes: 'translatable'
+                    .description.translatable:
+                      type: textarea
+                      label: Description
+                      classes: 'translatable'
+
+                  
