@@ -9,13 +9,13 @@
                     <img src="{{ url('theme://images/contact-section/c'~ loop.index ~'.svg') }}" />
 
                     <div class="content">
-                        <p>{{ contact.title.translatable }}</p>
+                        <h5>{{ contact.title.translatable }}</h5>
                         {% if loop.index == 1 %}
-                            <h5>{{ webdata('support_phone') }}</h5>
+                            <p>{{ webdata('company.address') }}</p>
                         {% elseif loop.index == 2 %}
-                            <h5>{{ webdata('support_email') }}</h5>
+                            <p>{{ webdata('support_phone') }}</p>
                         {% else %}
-                            <h5>{{ webdata('company.address') }}</h5>
+                            <p>{{ webdata('support_email') }}</p>
                         {% endif %}
                     </div>
                 </div>

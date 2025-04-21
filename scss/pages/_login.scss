@@ -72,7 +72,7 @@
   .login-title {
     font-family: var(--secondary-font);
     @include typography(display-lg, bold);
-    color: var(--color-primary);
+    color: var(--color-text-dark);
     text-align: left;
     // text-transform: uppercase;
 

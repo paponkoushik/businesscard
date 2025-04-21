@@ -11,9 +11,11 @@
   display: flex;
   gap: 1.25rem;
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-between;
+  
   @include desktop-small {
     flex-direction: column;
+    align-items: center;
   }
 
   .contact-left {
@@ -23,7 +25,8 @@
     font-family: var(--secondary-font);
     color: var(--color-text-dark);
     align-items: center;
-    flex: 40%;
+    // flex: 40%;
+    max-width: 448px;
 
     @include desktop-small {
       display: none;
@@ -52,7 +55,14 @@
   padding: 5.625rem 0;
   
   // position: relative;
-  background: var(--bg-body); 
+  background: var(--color-secondary); 
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @include desktop-small {
+    flex-direction: column-reverse;
+  }
 
   // background: var(--color-white);
   // height: 100%;
@@ -110,6 +120,7 @@
       flex-direction: column;
       align-items: flex-start;
       // gap: 6.25rem;
+      max-width: 658px;
       width: 100%;
       padding: 40px;
       background: var(--color-white);
@@ -118,7 +129,7 @@
 
       // background: #F1F0E9;
       // border-radius: 8px;
-      flex: 60%;
+      // flex: 60%;
 
       @include desktop-small{
         flex-direction: column;
@@ -141,6 +152,7 @@
   
         h1 {
           font-family: var(--secondary-font);
+          color: var(--color-text-dark);
           @include typography(display-lg, medium);
           @include tablet {
             @include typography(display-md, medium);
@@ -246,16 +258,24 @@
             border-radius: 8px;
           }
         }
+        .form-actions {
+          display: flex;
+          justify-content: flex-end;
+
+          @include desktop-small {
+            justify-content: center;
+          }
+        }
 
         button{
           padding: 12px 20px;
-          color: var(--color-text-dark);
+          color: var(--color-white);
           @include typography(text-lg, bold);
 
           // font-family: var(--secondary-font);
 
-          background: var(--color-secondary);
-          border-radius: 30px !important;
+          background: var(--color-primary);
+          // border-radius: 12px !important;
           .contact-button {
             display: flex;
             flex-direction: row-reverse;

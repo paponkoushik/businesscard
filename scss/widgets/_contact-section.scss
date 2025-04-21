@@ -1,27 +1,42 @@
 .contact-section {
-    background: var(--bg-body);
-    padding-bottom: 5.625rem;
-    padding-top: 1rem;
+    background: var(--color-secondary);
+    // padding-bottom: 5.625rem;
+    // padding-top: 4rem;
     .all-info {
         display: flex;
-        gap: 4.75rem;
+        gap: 1.5rem;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: stretch;
     
         @include desktop-small {
             flex-direction: column;
-            gap: 2.5rem;
+            gap: 1.625rem;
             align-items: center
         }
     
         .contact {
             display: flex;
-            gap: 1.375rem;
+            gap: 12px;
+            max-width: 364px;
+            width: 100%;
+            background: var(--color-white);
+            align-items: center;
+
+            border-radius: 12px;
+            border: 1px solid var(--color-light-shade);
+            padding: 12px;
     
-            @include desktop-small {
-                flex-direction: column;
-                gap: 1.375rem;
-                align-items: center;
+            // @include desktop-small {
+            //     flex-direction: column;
+            //     gap: 1.375rem;
+            //     align-items: center;
+            // }
+
+            .img {
+                max-width: 60px;
+                max-height: 60px;
+                width: 100%;
             }
     
             .content {
@@ -30,9 +45,9 @@
                 max-width: 402px;
                 width: 100%;
                 
-                @include desktop-small {
-                    text-align: center;
-                }
+                // @include desktop-small {
+                //     text-align: center;
+                // }
 
                 p {
                     @include typography(text-xl, regular);
@@ -40,8 +55,9 @@
                 }
 
                 h5 {
-                    @include typography(text-xl, bold);
-                    color: var(--color-text-dark);
+                    @include typography(display-xs, semibold);
+                    color: var(--color-black);
+                    font-family: var(--secondary-font);
                 }
             }
         }

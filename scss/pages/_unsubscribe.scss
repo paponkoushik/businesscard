@@ -165,7 +165,7 @@
   .unsubscribe-title {
     font-family: var(--secondary-font);
     @include typography(display-lg, semibold);
-    color: var(--color-primary);
+    color: var(--color-text-dark);
     text-align: left;
     // align-self: center;
 
