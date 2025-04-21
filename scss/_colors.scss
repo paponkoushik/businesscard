@@ -92,7 +92,7 @@
   --no-hero-bg: var(--color-primary);
   --no-hero-text: var(--color-text-light);
 
-  --login-bg-container: var(--bg-body);
+  --login-bg-container: var(--color-secondary);
   --login-bg: var(--bg-body);
   --login-text: var(--color-text-light);
 
@@ -108,8 +108,8 @@
   --unsubscribe-bg: var(--color-secondary);
   --unsubscribe-text: var(--color-primary);
   
-  --unsubscribe-btn-bg: var(--color-secondary);
-  --unsubscribe-btn-color: var(--color-text-dark);
+  --unsubscribe-btn-bg: var(--color-primary);
+  --unsubscribe-btn-color: var(--color-white);
 
   --policy-bg-container: var(--bg-body);
   

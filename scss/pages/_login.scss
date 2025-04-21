@@ -56,11 +56,9 @@
   //   z-index: -1; 
   // }
 
-  // @include desktop-small {
-  //   &::before {
-  //     height: 185%;
-  //   }
-  // }
+  @include desktop-small {
+    padding: 11.25rem 0 6.25rem;
+  }
 
   .container {
     max-width: 1344px;
@@ -73,7 +71,7 @@
 
   .login-title {
     font-family: var(--secondary-font);
-    @include typography(display-lg, semibold);
+    @include typography(display-lg, bold);
     color: var(--color-primary);
     text-align: left;
     // text-transform: uppercase;
@@ -84,8 +82,8 @@
   }
 
   .login-sub-title {
-    @include typography(text-l, regular);
-    color: var(--color-primary);
+    @include typography(text-lg, regular);
+    color: var(--color-text-light);
     text-align: left;
   }
 
@@ -112,7 +110,7 @@
           $border-radius: 24px,
           $spacing: 0rem,
           $title_typography: (size: display-xs, weight: semibold),
-          $button_typography: (size: text-lg, weight: bold),
+          $button_typography: (size: text-lg, weight: extra_bold),
           $label_typography: (size: text-md, weight: semibold),
           $input_styles: (),
   );

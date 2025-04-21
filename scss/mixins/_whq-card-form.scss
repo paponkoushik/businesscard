@@ -21,20 +21,23 @@ $spacing, $title_typography, $button_typography, $label_typography, $input_style
 
     .whq-card-container {
       display: flex;
-      align-items: stretch;
+      align-items: center;
       gap: 20px;
       // background-color: var(--color-secondary);
-      @include tablet {
+      justify-content: space-between;
+
+      @include desktop-small {
         flex-direction: column;
       }
 
       .form-image {
-        flex: 40%;
+        // flex: 40%;
         width: 100%;
+        max-width: 448px;
         img {
           width: 100%;
         }
-        @include tablet {
+        @include desktop-small {
           display: none;
         }
       }
@@ -54,8 +57,9 @@ $spacing, $title_typography, $button_typography, $label_typography, $input_style
       }
 
       .whq-card-content {
-        flex: 60%;
+        // flex: 60%;
         padding: 40px;
+        max-width: 658px;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -72,9 +76,8 @@ $spacing, $title_typography, $button_typography, $label_typography, $input_style
           margin-bottom: 1rem;
         }
         @include desktop-small {
-          padding: 40px 20px;
+          padding: 40px 20px 60px;
           width: 100%;
-          border-radius: 20px;
         }
 
         form {
@@ -139,12 +142,12 @@ $spacing, $title_typography, $button_typography, $label_typography, $input_style
               @include typography(map-get($button_typography, size), map-get($button_typography, weight)); // Extract size & weight
               box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
               width: 50%;
-              border-radius: 30px;
+              border-radius: 12px;
               padding: 12px 20px !important;
-              color: var(--color-white);
+              // color: var(--color-white);
               background: var(--unsubscribe-btn-bg) !important;
               align-self: center;
-              color: var(--unsubscribe-btn-text);
+              color: var(--color-white);
               margin-top: 3rem;
 
               @include tablet {
