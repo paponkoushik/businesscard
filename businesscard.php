@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class Nfinanceterminal0 extends BaseTheme
+class Businesscard extends BaseTheme
 {
     // Access plugin events in this class
 }

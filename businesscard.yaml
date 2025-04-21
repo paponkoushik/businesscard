@@ -4,7 +4,7 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-         - 'environment://themes/nfinanceterminal0'
+         - 'environment://themes/businesscard'
          - 'user://themes/base-theme'
 
 enabled: true

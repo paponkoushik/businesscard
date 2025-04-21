@@ -8,8 +8,8 @@ module.exports = {
     '../../../../themes/base-theme/templates/**/*.twig',
     './blueprints/**/*.yaml',
     './templates/**/*.twig',
-    './nfinanceterminal0.yaml',
-    './nfinanceterminal0.php'
+    './businesscard.yaml',
+    './businesscard.php'
   ],
   theme: {
     extend: {
