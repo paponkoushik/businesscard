@@ -97,9 +97,9 @@
       box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
       width: 70%;
       padding: 12px 20px !important;
-      background: #D80000 !important;
+      background: var(--warning) !important;
       color: var(--color-white);
-      border-radius: 30px;
+      border-radius: 12px;
       margin-top: 3rem;
           
       @include tablet {
@@ -165,7 +165,7 @@
   .unsubscribe-title {
     font-family: var(--secondary-font);
     @include typography(display-lg, semibold);
-    color: var(--color-primary);
+    color: var(--color-text-dark);
     text-align: left;
     // align-self: center;
 
@@ -175,7 +175,7 @@
   }
   p {
     @include typography(text-lg, normal);
-    color: var(--color-primary);
+    color: var(--color-text-light);
     text-align: left;
 
     // @include desktop-small{

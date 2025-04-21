@@ -56,11 +56,9 @@
   //   z-index: -1; 
   // }
 
-  // @include desktop-small {
-  //   &::before {
-  //     height: 185%;
-  //   }
-  // }
+  @include desktop-small {
+    padding: 11.25rem 0 6.25rem;
+  }
 
   .container {
     max-width: 1344px;
@@ -73,19 +71,19 @@
 
   .login-title {
     font-family: var(--secondary-font);
-    @include typography(display-lg, semibold);
-    color: var(--color-primary);
+    @include typography(display-lg, bold);
+    color: var(--color-text-dark);
     text-align: left;
     // text-transform: uppercase;
 
-    @include tablet{
-      @include typography(text-xl, medium);
+    @include desktop-small{
+      @include typography(display-sm, semibold);
     }
   }
 
   .login-sub-title {
-    @include typography(text-l, regular);
-    color: var(--color-primary);
+    @include typography(text-lg, regular);
+    color: var(--color-text-light);
     text-align: left;
   }
 
@@ -112,7 +110,7 @@
           $border-radius: 24px,
           $spacing: 0rem,
           $title_typography: (size: display-xs, weight: semibold),
-          $button_typography: (size: text-lg, weight: bold),
+          $button_typography: (size: text-lg, weight: extra_bold),
           $label_typography: (size: text-md, weight: semibold),
           $input_styles: (),
   );
@@ -157,7 +155,7 @@
           position: unset;
         }
         label {
-          @include typography(text-sm,medium);
+          @include typography(text-xl, regular);
           color: var(--login-text);
           margin-left: 8px;
         }
@@ -180,7 +178,7 @@
         margin-top: -1.3rem;
         text-decoration: none;
         padding: 0;
-        @include typography(text-sm,medium);
+        @include typography(text-xl,regular);
         color: var(--color-text-light);
         background-color: transparent;
         &.button{

@@ -1,6 +1,6 @@
 
 .prose.max-w-none.pt-12 {
-  background-color: var(--order-bg);
+  background-color: var(--color-secondary);
 }
 
 .orders-table-wrapper {
@@ -48,8 +48,8 @@
     border-collapse: separate;
     overflow: hidden;
     border-radius: 8px;
-    border: 1px solid #EAECF0;
-    box-shadow: 0px 1px 3px 0px #1018281A, 0px 1px 2px 0px #1018280F;
+    border: 1px solid var(--bg-body);
+    box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
     width: calc(100% - 4rem);
     max-width: 1280px;
 
@@ -61,9 +61,9 @@
     }
 
     thead th {
-      background-color: var(--color-secondary) !important;
-      color: var(--color-black);
-      border-right: 1px solid var(--color-white);
+      background-color: var(--color-primary) !important;
+      color: var(--bg-body);
+      border-right: 1px solid var(--bg-body);
       border-bottom: 1px solid var(--color-white);
       @include typography(text-xs, medium);
     }
@@ -102,10 +102,10 @@
     }
 
     tbody td {
-      border-top: 1px solid var(--color-white);
-      border-right: 1px solid var(--color-white);
+      border-top: 1px solid var(--bg-body);
+      border-right: 1px solid var(--bg-body);
       @include typography(text-sm, medium);
-      background-color: var(--color-white);
+      background-color: var(--bg-body);
 
       @include desktop-small {
         white-space: nowrap;
@@ -124,7 +124,7 @@
     td a.btn {
       vertical-align: middle;
       text-decoration: none;
-      background: #FF510E;
+      background: var(--warning);
       -webkit-background-clip: text;
       -webkit-text-fill-color: rgba(0, 0, 0, 0);
 
@@ -132,7 +132,7 @@
         vertical-align: middle;
         margin-right: 4px;
         margin-top: -1px;
-        stroke: #FF510E;
+        stroke: var(--warning);
       }
     }
   }
