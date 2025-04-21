@@ -392,10 +392,10 @@ ol, ul {
 	background-position: left;
 }
 
-.header-wrapper:not(.home-page) {
-	background: var(--color-primary);
+// .header-wrapper:not(.home-page) {
+// 	background: var(--color-primary);
 
-	@include desktop-small {
-		background: transparent;
-	}
-}
+// 	@include desktop-small {
+// 		background: transparent;
+// 	}
+// }
