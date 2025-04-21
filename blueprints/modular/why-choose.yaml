@@ -11,7 +11,7 @@ form:
             module_section:
               ordering@: 3
               type: section
-              title: Why Choose blocks
+              title: Module blocks
               underline: true
               fields:
                 header.module.title.translatable:
@@ -19,20 +19,10 @@ form:
                   label: Title
                   classes: 'translatable'
 
-                header.module.image:
-                  type: pagemediaselect
-                  label: Image
-                  preview_images: true
-
-                header.module.image_small:
-                  type: pagemediaselect
-                  label: Image Small
-                  preview_images: true
-
             header.why_choose_section:
               ordering@: 4
               type: section
-              title: Why Choose Item
+              title: Why Choose
               underline: false
               label: false
               fields:
@@ -43,9 +33,19 @@ form:
                       type: text
                       label: Title
                       classes: 'translatable'
+                    .description.translatable:
+                      type: textarea
+                      label: Description
+                      classes: 'translatable'
                     .icon:
                       type: pagemediaselect
                       label: icon
+                    .image_inside:
+                      type: pagemediaselect
+                      label: Image Inside
+                    .image_outside:
+                      type: pagemediaselect
+                      label: Image Outside
             header.media_order:
                 ordering@: 99
 

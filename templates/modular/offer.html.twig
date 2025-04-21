@@ -2,35 +2,50 @@
 
 {% set module = page.header.offer %}
 {% block render_block %}
+	{% set left = page.media[page.header.offer.offer_img_left].url ?? '' %}
+	{% set left_top = page.media[page.header.offer.offer_img_left_top].url ?? '' %}
+	{% set left_btm = page.media[page.header.offer.offer_img_right_bottom].url ?? '' %}
 
-	{% set bg = page.media[page.header.offer.offer_bg].url ?? '' %}
-
-	<div class="offer" style="{% if(bg) %}background-image: url('{{ bg }}'){% endif %}">
+	<div class="offer">
 		<div class="container">
-			<div class="offer-text" >
-				<h1 class="offer-title">
-					{{ module.h1.translatable|striptags('<span>')|raw }}
-				</h1>
+			<div class="offer-text">
+				{% if left_top != '' %}
+				 <img class="left_top" src="{{ left_top }}" alt="icon"/>
+				{% endif %}
 
-				<p class="">{{ module.text.translatable }}</p>
+				{% if left_btm != '' %}
+				 <img class="right_bottom" src="{{ left_btm }}" alt="icon"/>
+				{% endif %}
 
-				{% for button in module.buttons  %}
-					<a class="button " href="{{ button.link }}">
+				{% if left != '' %}
+					<div class="offer-image">
+						<img class="" src="{{ left }}" alt="icon"/>
+					</div>
+				{% endif %}
 
-						<span>{{ button.text.translatable }}</span>
+				<div class="offer-content"> 
+					<h1 class="offer-title">
+						{{ module.h1.translatable|striptags('<span>')|raw }}
+					</h1>
 
-						{# <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-						<path d="M12 16.7239L16 12.7239M16 12.7239L12 8.72388M16 12.7239H8M22 12.7239C22 18.2467 17.5228 22.7239 12 22.7239C6.47715 22.7239 2 18.2467 2 12.7239C2 7.20103 6.47715 2.72388 12 2.72388C17.5228 2.72388 22 7.20103 22 12.7239Z" stroke="url(#paint0_linear_12305_3123)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						<defs>
-						<linearGradient id="paint0_linear_12305_3123" x1="12" y1="22.7239" x2="12" y2="2.72388" gradientUnits="userSpaceOnUse">
-						<stop stop-color="#fff"/>
-						<stop offset="1" stop-color="#fff"/>
-						</linearGradient>
-						</defs>
-						</svg> #}
-                        
-					</a>
-				{% endfor %}
+					<p class="">{{ module.text.translatable }}</p>
+
+					{% for button in module.buttons  %}
+						<a class="button " href="{{ button.link }}">
+
+							<span>{{ button.text.translatable }}</span>
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+								<circle cx="20" cy="20" r="20" transform="rotate(-180 20 20)" fill="white"/>
+								<path d="M26.2395 14.2843C26.2395 13.8842 25.9151 13.5598 25.515 13.5598L18.9943 13.5598C18.5942 13.5598 18.2698 13.8842 18.2698 14.2843C18.2698 14.6845 18.5942 15.0088 18.9943 15.0088L24.7905 15.0088L24.7905 20.805C24.7905 21.2051 25.1149 21.5295 25.515 21.5295C25.9151 21.5295 26.2395 21.2051 26.2395 20.805L26.2395 14.2843ZM14.9964 25.8275L26.0273 14.7966L25.0027 13.772L13.9718 24.8029L14.9964 25.8275Z" fill="black"/>
+							</svg>
+							
+						</a>
+					{% endfor %}
+
+				</div>
+
+				
 			</div>
 
 		</div>

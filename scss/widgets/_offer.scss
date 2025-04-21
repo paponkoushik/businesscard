@@ -3,18 +3,13 @@
   padding: 6.25rem 0;
   align-items: center;
   align-self: stretch;
-  // background-color: var(--color-white);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  // background-color: var(--color-secondary);
   position: relative;
   overflow: hidden;
-  
 
   @include desktop-small {
-    padding: 94px 0;
+    padding: 5rem 0;
   }
-
 
   .container {
     display: flex;
@@ -40,80 +35,161 @@
       justify-content: center;
       color: var(--color-white);
       gap: 1.25rem;
-      padding: 32px;
-      max-width: 100%;
-     
+      padding: 64px 32px;
+      max-width: 1440px;
+      border-radius: 32px;
+      background-color: var(--color-secondary);
+      position: relative;
+
       @include desktop-small {
-        padding: 0;
+        padding: 100px 16px;
         max-width: 100%;
-        gap: 1.5rem;
       }
 
-      .offer-title {
-        @include typography(display-lg, semibold);
-        font-family: var(--secondary-font);
-        max-width: 70%;
+      .left_top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 32px 0;
 
-        @include desktop-small{
-          @include typography(display-sm, semibold);
-          max-width: 100%;
+        @include tablet{
+          width: 70px;
+          height: auto;
         }
       }
 
-      p {
-        @include typography(text-lg, regular);
-        max-width: 50%;
-        @include desktop-small {
-          max-width: 100%;
-          @include typography(text-md, regular);
-        }
+      .right_bottom{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 32px 0;
 
+        @include tablet{
+          width: 70px;
+          height: auto;
+        }
       }
 
-      .button{
-        margin-top: 40px;
-        align-self: center;
+      .offer-content{
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        @include typography(text-xl, extra_bold);
-        background: var(--color-white);
-        border: 1px solid var(--color-primary);
-        //color: var(--color-hero-button);
+        gap: 16px;
 
-        span {
+        .offer-title {
+          color: var(--color-text-dark);
+          @include typography(display-xl, medium);
+          max-width: 475px;
+          // -webkit-text-fill-color: unset;
+          @include desktop-small{
+            @include typography(display-sm, medium);
+          }
+  
+          span{
+            display: block;
+            color: var(--color-primary);
+            @include typography(display-lg, medium);
+
+            @include desktop-small{
+              @include typography(display-lg, medium);
+            }
+          }
+        }
+  
+        p {
+          color: var(--color-text-light);
+          @include typography(text-xl, regular);
+          max-width: 70%;
+          @include desktop-small {
+            max-width: 100%;
+          }
+  
+        }
+  
+        .button{
+          margin-top: 40px;
+          align-self: center;
+          display: flex;
+          align-items: center;
+          padding: 16px 28px;
+          @include typography(text-lg, medium);
+  
+          @include desktop-small {
+            @include typography(text-md, medium);
+          }
+          border: 1px solid var(--color-primary);
           background: var(--color-primary);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: rgba(0, 0, 0, 0);
-        }
-        // svg {
-        //   path {
-        //     stroke: var(--color-white);
-        //   }
-        // }
-
-        &:hover {
-          border: 1px solid var(--color-white);
-        }
-
-        @include desktop-small{
-          margin-top: 16px;
+          border-radius: 30px;
+          position: relative;
+          padding-right: 65px;
+          position: relative;
+          //color: var(--color-hero-button);
+  
+          span {
+            color: var(--color-white);
+          }
+          svg {
+            position: absolute;
+            right: 5px;
+            
+          }
+           
         }
       }
-      
+
     }
 
   }
 }
 
 
-@keyframes offerslideIn {
-  0% {
-    top: -100%;
-    left: -100%;
+
+.page-about .offer .container .offer-text{
+
+  flex-direction: row;
+  padding: 52px 48px;
+  gap: 137px;
+  max-width: unset;
+
+  @include desktop-small{
+    flex-direction: column;
+    gap: 34px;
   }
-  100% {
-    top: 0%;
-    left: 300%;
+
+  .offer-image{
+    flex: 1;
+    width: 100%;
+
+    img{
+      width: 100%;
+    }
   }
+
+  .offer-content{
+    flex: 1;
+    gap: 0;
+
+    .offer-title{
+      max-width: 682px;
+      text-align: left;
+      font-family: var(--secondary-font);
+      @include typography(display-md, medium);
+
+      @include desktop-small{
+        @include typography(display-xs, medium);
+      }
+
+      span{
+        font-family: var(--secondary-font);
+        color: var(--color-primary);
+        @include typography(display-md, medium);
+
+        @include desktop-small{
+          @include typography(display-xs, medium);
+        }
+      }
+    }
+  }
+
 }
