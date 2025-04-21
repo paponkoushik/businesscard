@@ -76,8 +76,8 @@
     text-align: left;
     // text-transform: uppercase;
 
-    @include tablet{
-      @include typography(text-xl, medium);
+    @include desktop-small{
+      @include typography(display-sm, semibold);
     }
   }
 
