@@ -9,7 +9,8 @@
 
             <div class="faq-content">
                 {% if module.title %}
-                    <h3 class="block-title section-title">{{ module.title.translatable|raw }}</h3>
+                    {# <h3 class="block-title section-title">{{ module.title.translatable|raw }}</h3> #}
+                    <h3 class="block-title">{{ module.title.translatable|raw }}</h3>
                 {% endif %}
 
                 {% if module.sub_title %}
@@ -66,7 +67,8 @@
                                         class="faq-accordion-down-btn">
                                 </div>
                                 <div class="faq-accordion-body d-none" id="faq-accordion-item-{{ key }}">
-                                    <p>{{ faq_item.description.translatable }}</p>
+                                    <p>{{ faq_item.description.translatable|striptags('<br>')|raw }}</p>
+                                     {# module.title.translatable|striptags('<span>')|raw #}
                                 </div>
                             </div>
                         {% endif %}

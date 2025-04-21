@@ -217,11 +217,11 @@ textarea {
   align-self: stretch;
   border-radius: var(--border-radius);
   @include typography(base);
-  border: 1px solid #B8B8B8;
+  border: 1px solid var(--color-light-shade);
   transition: box-shadow 0.3s ease-in-out;
   /* Add a smooth transition effect */
-  background: $field_background_disabled;
-  color: rgba(14, 14, 14, 0.708);
+  background: var(--bg-body);
+  color: var(--color-text-light);
   line-height: 1.4rem;
 
   &:hover {

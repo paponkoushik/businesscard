@@ -1,5 +1,5 @@
 .faqs {
-  padding: 5rem 0;
+  padding: 8.75rem 0;
   background-color: var(--bg-body);
 
   // background-image: url(../../images/bg_faq.png);
@@ -8,7 +8,7 @@
   // background-repeat: no-repeat;
 
   @include desktop-small {
-    padding: 40px 0;
+    padding: 6.25rem 0;
   }
 
   .faq-content {
@@ -189,14 +189,17 @@
             flex: 1;
             border: none;
             background-color: transparent;
-            color: var(--color-text-dark);
+            color: var(--color-black);
             text-align: left;
-            @include typography(text-xl, bold);
+            @include typography(display-xs, medium);
             cursor: pointer;
              font-family: var(--secondary-font);
             @include desktop-small {
               @include typography(text-lg, bold);
             }
+          }
+          .opened {
+            color: var(--color-primary) !important;
           }
         }
 

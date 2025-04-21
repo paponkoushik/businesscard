@@ -10,7 +10,7 @@
   // display: flex;
   // justify-content: center;
   // z-index: 1; 
-  background: var(--bg-body); 
+  background: var(--color-secondary); 
   padding: 5.625rem 1rem;
 
   // &::before {
@@ -85,9 +85,9 @@
     button {
       display: block;
       width: fit-content;
-      background: #D80000;
+      background: var(--warning);
       color: var(--color-white);
-      border-radius: 30px;
+      border-radius: 12px;
       font-size: 1rem;
 
       padding: 12px 20px;
