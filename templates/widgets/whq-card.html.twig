@@ -10,12 +10,12 @@
             </picture> #}
 {#            <src></src>#}
 
-            <img src="{{ url('theme://images/form-image.png') }}"/>
-            {# {% if grav.route.route == "/unsubscribe" %}
+            {# <img src="{{ url('theme://images/form-image.png') }}"/> #}
+            {% if grav.route.route == "/unsubscribe" %}
                 <img src="{{ url('theme://images/unsubscribe_image.png') }}"/>
             {% else %}
-                
-            {% endif %} #}
+                <img src="{{ url('theme://images/form-image.png') }}"/>
+            {% endif %}
         </div>
         <div class="whq-card-content">
             {% block card_content %}{% endblock %}
