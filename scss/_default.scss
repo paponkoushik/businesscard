@@ -62,19 +62,20 @@ h6 span {
 .button {
   display: block;
   appearance: none;
-  background: var(--bg-button);
-  color: var(--color-button);
+  background: var(--color-primary);
+  color: var(--color-white);
   text-decoration: none;
   cursor: pointer;
   line-height: 1.625rem;
   transition: all 0.3s ease-in-out;
   /* Add a smooth transition effect */
+  @include typography(text-lg, extra_bold);
   border: none;
-  padding: 12px 18px;
+  padding: 12px 24px;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 

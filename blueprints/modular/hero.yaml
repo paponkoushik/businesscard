@@ -28,7 +28,10 @@ form:
                         value: "text_right__image_left"
                       - text: "Text image in center"
                         value: "text_image_center"
-
+                header.hero.subtitle.translatable:
+                  type: text
+                  label: Hero Subtitle
+                  classes: 'translatable'
                 header.hero.h1.translatable:
                   type: text
                   label: H1 Hero Header
@@ -40,9 +43,10 @@ form:
                 header.hero.image:
                     type: pagemediaselect
                     label: Hero image
-                header.hero.left_image:
+                header.hero.left_image_bg:
                     type: pagemediaselect
-                    label: Hero left image
+                    label: Hero left bg image
+
                 header.hero.hero_bg:
                   type: pagemediaselect
                   label: Hero background image
