@@ -14,12 +14,16 @@
         const accordionButtons = document.querySelectorAll(".faq-accordion-header");
 
         accordionButtons.forEach((button) => {
-            button.addEventListener("click", function () {
+            button.addEventListener("click", function ()  {
                 const targetId = button.getAttribute("data-target");
                 const body = document.querySelector(targetId);
                 const parentItem = button.closest(".faq-accordion-item");
                 const upIcon = parentItem.querySelector(".faq-accordion-up-btn");
+
+                const openHeader = parentItem.querySelector(".faq-accordion-btn");
+                
                 const downIcon = parentItem.querySelector(".faq-accordion-down-btn");
+
 
                 const isOpen = !body.classList.contains("d-none");
 
@@ -32,8 +36,10 @@
                         body.classList.add("d-none");
                     }, 15);
 
-                    upIcon.classList.add("d-none");
+                    upIcon.classList.add("d-none"); 
                     downIcon.classList.remove("d-none");
+
+                    openHeader.classList.remove("opened");
                 } else {
                     setTimeout(() => {
                         body.style.height = 100 + "%";
@@ -45,6 +51,8 @@
 
                     upIcon.classList.remove("d-none");
                     downIcon.classList.add("d-none");
+                    
+                    openHeader.classList.add("opened");
                 }
             });
         });

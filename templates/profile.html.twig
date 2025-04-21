@@ -2,6 +2,8 @@
 {% extends 'partials/base.html.twig' %}
 {% set title = page.header.profile.title.translatable %}
 
+{% set customer = website_manager_api.getCustomer(grav.user.data.customer_id) %} 
+
 {% set userProfile = forms('user-profile') %}
 {% do userProfile.setAllData({
     first_name: customer.data.first_name,
