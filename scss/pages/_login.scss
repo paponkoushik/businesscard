@@ -155,7 +155,7 @@
           position: unset;
         }
         label {
-          @include typography(text-sm,medium);
+          @include typography(text-xl, regular);
           color: var(--login-text);
           margin-left: 8px;
         }
@@ -178,7 +178,7 @@
         margin-top: -1.3rem;
         text-decoration: none;
         padding: 0;
-        @include typography(text-sm,medium);
+        @include typography(text-xl,regular);
         color: var(--color-text-light);
         background-color: transparent;
         &.button{
