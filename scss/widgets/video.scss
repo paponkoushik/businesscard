@@ -3,6 +3,10 @@
     background: linear-gradient(180deg, #7F52D9 0%, #181818 100%);
     padding: 6rem 0 3rem 0;
 
+    @include desktop-small {
+        padding: 6rem 0 3rem 0;
+    }
+
     .video-wrapper {
         .head-content {
             text-align: center;

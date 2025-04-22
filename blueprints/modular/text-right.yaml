@@ -13,40 +13,52 @@ form:
               type: text
               label: Sub Title
               classess: 'translatable'
+
             header.text_right.title.translatable:
               type: text
               label: Title
               classess: 'translatable'
+
             header.text_right.buttom_left_title.translatable:
               type: text
               label: Buttom Left Title
               classess: 'translatable'
+
             header.text_right.buttom_left_text.translatable:
               type: text
               label: Buttom Left Text
               classess: 'translatable'
+
             header.text_right.buttom_right_title.translatable:
               type: text
               label: Buttom Right Title
               classess: 'translatable'
+
             header.text_right.buttom_right_text.translatable:
               type: text
               label: Buttom Right Text
               classess: 'translatable'
+
             header.text_right.image:
               type: pagemediaselect
               label: Image left
+              preview_images: true
+
             header.text_right_small.image:
               type: pagemediaselect
               label: Small image left
+              preview_images: true
+
             header.text_right.left_title.translatable:
               type: text
               label: Left Title
               classess: 'translatable'
-            header.text_right.left_text.translatable:
+
+            header.text_right.left_btn_text.translatable:
               type: text
-              label: Left text
+              label: Left BTN text
               classess: 'translatable'
+
             header.text_right.classes:
               label: Background Color
               type: selectize
