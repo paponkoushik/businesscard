@@ -19,7 +19,7 @@
 
                         <h4>{{ module.left_title.translatable|striptags('<span>')|raw }}</h4>
                         
-                        <a href="#" class="text-right-btn">{{ module.left_btn_text.translatable }}</a>
+                        <a href="{{ home_url|e }}{{ webdata('signup_url') }}" class="text-right-btn">{{ module.left_btn_text.translatable }}</a>
                     </div>
 
                     <img class="" src="{{ small_image.url }}" alt="icon"/>
