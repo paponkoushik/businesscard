@@ -18,6 +18,42 @@ form:
                   type: text
                   label: Title
                   classes: 'translatable'
+                header.module.left_bottom_title.translatable:
+                  type: text
+                  label: Left Bottom Title
+                  classes: 'translatable'
+                header.module.left_bottom_sub_title.translatable:
+                  type: text
+                  label: Left Bottom Sub Title
+                  classes: 'translatable'
+                header.module.right_bottom_title.translatable:
+                  type: text
+                  label: Right Bottom Title
+                  classes: 'translatable'
+                header.module.right_bottom_image:
+                  type: pagemediaselect
+                  label: Right Bottom Image
+                header.module.last_left_text.translatable:
+                  type: text
+                  label: Last Left Text
+                  classes: 'translatable'
+                header.module.last_right_text.translatable:
+                  type: text
+                  label: Last Right Text
+                  classes: 'translatable'
+                header.module.last_right_button_text.translatable:
+                  type: text
+                  label: Last Right Text
+                  classes: 'translatable'
+                header.module.last_left_image:
+                  type: pagemediaselect
+                  label: Last Left Image
+                header.module.last_right_image:
+                  type: pagemediaselect
+                  label: Last Right Image
+
+                  
+
 
             header.why_choose_section:
               ordering@: 4
