@@ -11,24 +11,30 @@ form:
             module_section:
               ordering@: 3
               type: section
-              title: Carousel Block Info
+              title: Testimonial Block Info
               underline: true
               fields:
-                header.carousel.title.translatable:
+                header.contents.title.translatable:
                   type: text
                   label: Title
                   classes: 'translatable'
-                header.carousel.description.translatable:
+
+                header.contents.description.translatable:
                   type: textarea
                   label: Description
                   classes: 'translatable'
-                  rows: 10
+                  rows: 5
 
+                header.image:
+                  type: pagemediaselect
+                  label: Image
+                  preview_images: true
 
+            
             header.carousel_feature_items:
               ordering@: 4
               type: section
-              title: Carousel Items
+              title: Testimonial Items
               underline: false
               label: false
               fields:
@@ -46,7 +52,9 @@ form:
                     .image:
                       type: pagemediaselect
                       label: Image
+                      preview_images: true
+
             header.media_order:
-                ordering@: 99
+              ordering@: 99
 
 
