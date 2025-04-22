@@ -51,7 +51,7 @@ form:
 
                 header.no_hero_content.subtitle.translatable:
                   type: text
-                  label: Title
+                  label: Sub Title
                   classess: 'translatable'
 
                 header.no_hero_content.description.translatable:
@@ -64,20 +64,20 @@ form:
                   label: Button Text
                   classess: 'translatable'
 
-                header.no_hero_content.image_for_desktop:
-                    type: pagemediaselect
-                    label: No Hero image for Desktop
-                    preview_images: true
- 
-                header.no_hero_content.image_top_left:
-                    type: pagemediaselect
-                    label: No Hero image top left
-                    preview_images: true
-
-                header.no_hero_content.image_bottom_right:
-                    type: pagemediaselect
-                    label: No Hero image bottom right
-                    preview_images: true
+                header.nohero_imgs_section:
+                    # ordering@: 4
+                    type: section
+                    title: No Hero Images
+                    underline: false
+                    label: false
+                    fields:
+                      header.nohero_imgs:
+                        type: list
+                        fields:
+                          
+                          .image:
+                            type: pagemediaselect
+                            label: No Hero Image
 
                 header.no_hero_content.trainers.isEnabled:
                   type: toggle
