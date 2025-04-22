@@ -1,5 +1,6 @@
 {% extends 'partials/variables.html.twig' %}
 
+
 {% block render_block %}
 
     {#  {% cache 'pricing-' ~ grav.language.getActive %} #}
@@ -51,11 +52,14 @@
 
 
     <div class="pricings" id="modular_pricing">
-       
         <div class="container">
             <h3 class="block-title">{{ page.title|striptags('<span>')|raw  }}</h3>
             <p>{{ page.content|raw }}</p>
-            <h5>{{ page.title|striptags('<span>')|raw  }}</h5>
+            <div class="pricing-sub-title">
+                <h5>{{ page.header.sub_title.translatable }}</h5>
+                <img src="{{ url('theme://images/pricing/pricing_image.svg') }}"/>
+            </div>
+            
         </div>
 
         <div class="container pricings-container">
