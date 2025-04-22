@@ -16,6 +16,31 @@ form:
 
               fields:
 
+                header.offer.h1.translatable:
+                  type: text
+                  label: H1 Offer Header
+                  classes: 'translatable'
+                header.offer.text.translatable:
+                  type: textarea
+                  label: Offer Text
+                  classes: 'translatable'
+                header.offer.offer_img_bg:
+                  type: pagemediaselect
+                  label: Offer image bg
+                  
+                header.offer.buttons:
+                  type: list
+                  label: offer Buttons
+                  style: vertical
+                  fields:
+                    .text.translatable:
+                      type: text
+                      label: Button Text
+                      classes: 'translatable'
+                    .link:
+                      type: text
+                      label: Button Link
+
                 header.footer.left_sub_title.translatable:
                   type: text
                   label: Left Subtitle
