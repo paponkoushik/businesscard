@@ -36,23 +36,82 @@
 
                     <div class="why_choose_contents">
                         {% set img_in = page.media[why_choose.image_inside] %}
-                         {% if img_in != '' %}
-                            <div class="img_in">
-                                <img class="" src="{{ img_in.url }}"/>
-                            </div>
-                         {% endif %}
                         <div class="why_choose_content">
-                            {% set icon = page.media[why_choose.icon] %}
+                            {# {% set icon = page.media[why_choose.icon] %} #}
                             <div class="icon_head">
-                                <img class="icon" src="{{ icon.url }}"/>
+                                {# <img class="icon" src="{{ icon.url }}"/> #}
                                 <h4 class="head">{{ why_choose.title.translatable }}</h4>
                             </div>
                             
                             <p class="desc">{{ why_choose.description.translatable }}</p>
                         </div>
+                        {% if img_in != '' %}
+                            <div class="img_in">
+                                <img class="" src="{{ img_in.url }}"/>
+                            </div>
+                         {% endif %}
                     </div>
                 </div>
             {% endfor %}
+
+                <div class="why_choose_card_bottom">
+                    <div class="bottom_contents">
+                        <div class="bottom_content_left">
+                            <svg class="left_top" xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
+                                <path d="M51 1H1V51" stroke="white" stroke-width="2"/>
+                            </svg>
+                            <svg class="right_top" xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
+                                <path d="M50 51L50 1L-1.07288e-06 0.999998" stroke="white" stroke-width="2"/>
+                            </svg>
+                            
+                            <div class="center-content">
+                                <h5>{{ module.left_bottom_title.translatable|striptags('<span>')|raw }}</h5>
+                                <h6>{{ module.left_bottom_sub_title.translatable|striptags('<span>')|raw }}</h6>
+                            </div>
+
+                            <svg class="right_bottom" xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
+                                <path d="M-1.07288e-06 50L50 50L50 -1.07288e-06" stroke="white" stroke-width="2"/>
+                            </svg>
+                            <svg class="left_bottom" xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
+                                <path d="M0.999998 -1.07288e-06L1 50L51 50" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+
+                        <div class="bottom_content_right">
+                            <h4>{{ module.right_bottom_title.translatable|striptags('<span>')|raw }}</h4>
+                            <img class="" src="{{ page.media[module.right_bottom_image].url }}"/>
+                        </div>
+                    </div>
+
+                    <div class="last_contents">
+                        <div class="last_content_left">
+                            <p>{{ module.last_left_text.translatable|striptags('<span>')|raw }}</p>
+                            <div class="last_content_left_bottom">
+                                <div class="last_left_image"><img class="" src="{{ page.media[module.last_left_image].url }}"/></div>
+                                <img class="" src="{{ page.media[module.last_right_image].url }}"/>
+                            </div>
+                        </div>
+                        <div class="last_content_right">
+                            <div class="top">
+                                <svg width="79" height="78" viewBox="0 0 79 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="39.5" cy="39" r="38.35" fill="white" stroke="#7F52D9" stroke-width="1.3"/>
+                                    <path d="M27.3954 43.3056C32.5681 40.2736 39.1201 40.2736 44.2927 43.3056C44.4566 43.4016 44.6606 43.5148 44.8927 43.6437C45.9207 44.2143 47.5 45.0911 48.5813 46.1329C49.2565 46.7834 49.922 47.6622 50.0435 48.7564C50.1737 49.9289 49.6499 51.0108 48.6484 51.9501C46.942 53.5504 44.8816 54.8441 42.2128 54.8441H29.4753C26.8065 54.8441 24.7461 53.5504 23.0398 51.9501C22.0382 51.0108 21.5144 49.9289 21.6446 48.7564C21.7661 47.6622 22.4317 46.7834 23.1068 46.1329C24.1881 45.0911 25.7674 44.2143 26.7955 43.6437C27.0276 43.5148 27.2316 43.4016 27.3954 43.3056Z" fill="#7F52D9"/>
+                                    <path d="M28.1253 30.8754C28.1253 26.6124 31.5811 23.1566 35.8441 23.1566C40.107 23.1566 43.5628 26.6124 43.5628 30.8754C43.5628 35.1383 40.107 38.5941 35.8441 38.5941C31.5811 38.5941 28.1253 35.1383 28.1253 30.8754Z" fill="#7F52D9"/>
+                                    <path d="M56.7973 23.6486C57.1987 24.4513 56.8733 25.4274 56.0706 25.8288C54.8142 26.457 53.5828 27.8085 52.6037 29.1792C52.1328 29.8385 51.7544 30.4532 51.4944 30.9024C51.3648 31.1263 51.2657 31.307 51.2004 31.4291C51.1677 31.4902 51.1436 31.5364 51.1284 31.5659L51.1123 31.5973L51.1098 31.6021C50.8496 32.1221 50.331 32.464 49.7503 32.4976C49.1695 32.5313 48.6151 32.2518 48.2966 31.765C48.0488 31.3862 47.6231 31.0016 47.181 30.6819C46.9723 30.5311 46.7841 30.412 46.6506 30.332C46.5843 30.2923 46.5327 30.263 46.5005 30.245L46.4675 30.227C45.6724 29.8117 45.3632 28.8302 45.778 28.0347C46.193 27.239 47.1745 26.9302 47.9702 27.3452L47.9728 27.3465L47.9759 27.3482L47.984 27.3524L48.0072 27.3648C48.0257 27.3748 48.0502 27.3881 48.0801 27.4048C48.1399 27.438 48.2217 27.4846 48.3204 27.5438C48.5169 27.6615 48.7858 27.8318 49.0849 28.048C49.161 28.103 49.2409 28.1623 49.3236 28.2258C49.514 27.9312 49.7264 27.6159 49.9591 27.2902C51.0113 25.8172 52.6236 23.9187 54.6172 22.9219C55.4199 22.5206 56.396 22.8459 56.7973 23.6486Z" fill="#7F52D9"/>
+                                </svg>
+                                <p>{{ module.last_right_text.translatable|striptags('<span>')|raw }}</p>
+                            </div>
+                            <div class="button">
+                                <a href="{{ url(grav.language.getActive ~ '/about-us') }}" class="last-right-btn">{{ module.last_right_button_text.translatable }}</a>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M16.2071 6.29289C15.8166 5.90237 15.1834 5.90237 14.7929 6.2929C14.4024 6.68342 14.4024 7.31659 14.7929 7.70711L18.0858 11H4.5C3.94772 11 3.5 11.4477 3.5 12C3.5 12.5523 3.94772 13 4.5 13H18.0858L14.7929 16.2929C14.4024 16.6834 14.4024 17.3166 14.7929 17.7071C15.1835 18.0976 15.8166 18.0976 16.2072 17.7071L21.2018 12.7124C21.2202 12.6942 21.238 12.6753 21.255 12.6558C21.3225 12.5781 21.3761 12.4926 21.4158 12.4024C21.4696 12.2801 21.4996 12.145 21.5 12.003V12C21.5 11.9969 21.5 11.9938 21.5 11.9907C21.4988 11.865 21.4745 11.7447 21.431 11.6341C21.3822 11.5098 21.3076 11.3933 21.2071 11.2929L16.2071 6.29289Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
         </div>
     </div>
 {% endblock %}

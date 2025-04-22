@@ -1,6 +1,6 @@
 .why_choose {
   display: flex;
-  padding: 5rem 0;
+  padding: 10rem 0;
   flex-direction: column;
   align-items: center;
   row-gap: 5rem;
@@ -9,7 +9,7 @@
   position: relative;
 
   @include desktop-small {
-    padding: 4rem 0;
+    padding: 6.25rem 0;
     row-gap: 2.625rem;
   }
 
@@ -35,22 +35,22 @@
     }
 
     .block-title {
-      @include typography(display-lg, medium);
+      @include typography(display-lg, bold);
       // opacity: 0;
       font-family: var(--secondary-font);
       color: var(--color-text-dark);
 
       @include desktop-small {
-        @include typography(display-md, medium);
+        @include typography(display-md, bold);
       }
 
       span{
         font-family: var(--secondary-font);
         color: var(--color-primary);
-        @include typography(display-lg, medium);
+        @include typography(display-lg, bold);
 
         @include desktop-small {
-          @include typography(display-md, medium);
+          @include typography(display-md, bold);
         }
       }
     }
@@ -60,14 +60,16 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 1.5rem;
+      max-width: 716px;
+      width: 100%;
 
       .why_choose_description {
         // opacity: 0;
         p {
           color: var(--color-text-light);
           @include typography(text-xl, regular);
-          @include mobile{
-            @include typography(text-md, regular);
+          @include desktop-small{
+            @include typography(text-lg, regular);
           }
         }
       }
@@ -80,6 +82,7 @@
   .why_choose_container {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
@@ -91,25 +94,232 @@
       flex-direction: column;
     }
 
-
-    .why_choose_card {
-      flex: 33.33%;
+    .why_choose_card_bottom {
       display: flex;
       flex-direction: column;
+      gap: 1.25rem;
+      width: 100%;
+
+      .bottom_contents {
+        display: flex;
+        gap: 1.25rem;
+
+        @include desktop-small {
+          flex-direction: column;
+
+        }
+
+        .bottom_content_left {
+          padding: 40px;
+          background: var(--color-primary);
+          border-radius: 20px;
+          position: relative;
+          flex: 40%;
+
+          .left_top {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+          }
+          .right_top {
+            position: absolute;
+            right: 40px;
+            top: 40px;
+          }
+          .right_bottom {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+          }
+          .left_bottom {
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+          }
+
+          .center-content {
+            display: flex;
+            flex-direction: column;
+            gap: 34px;
+            align-items: center;
+            padding: 40px;
+            h5 {
+              font-family: var(--secondary-font);
+              color: var(--color-white);
+              @include typography(display-sm, semibold);
+              max-width: 330px;
+              width: 100%;
+              text-align: center;
+            }
+
+            h6 {
+              font-family: var(--secondary-font);
+              color: var(--color-white);
+              @include typography(display-xs, semibold);
+              max-width: 330px;
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+
+        .bottom_content_right {
+          flex: 60%;
+          background-color: var(--color-secondary);
+          border-radius: 20px;
+          padding: 0 0 0 40px;
+          display: flex;
+          gap: 10px;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          @include desktop-small {
+            flex-direction: column;
+            padding: 30px 0 0 30px;
+            align-items: flex-start;
+          }
+
+          h4 {
+            font-family: var(--secondary-font);
+            color: var(--color-primary);
+            @include typography(display-md, semibold);
+            padding-bottom: 40px;
+
+            @include desktop-small {
+              @include typography(display-sm, semibold);
+              padding-bottom: 0;
+              padding-right: 30px;
+            }
+          }
+          img {
+            align-self: end;
+            @include mobile {
+              width: 100%;
+            }
+          }
+
+          
+        }
+      }
+
+      .last_contents {
+        display: flex;
+        gap: 1.25rem;
+
+        @include desktop-small {
+          flex-direction: column;
+        }
+
+        .last_content_left {
+          background-color: var(--color-secondary);
+          flex: 60%;
+          padding: 40px 40px 0 40px;
+          border-radius: 20px;
+
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          @include desktop-small {
+            gap: 38px;
+            padding: 30px 14px 0;
+          }
+
+          p {
+            @include typography(text-xl, regular);
+            max-width: 628px;
+            width: 100%;
+            span {
+              @include typography(text-xl, bold);
+            }
+            @include desktop-small {
+              text-align: center;
+            }
+          }
+
+          .last_content_left_bottom {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-around;
+            align-items: center;
+
+            @include desktop-small {
+              flex-direction: column;
+              gap: 4.875rem;
+            }
+
+            .last_left_image {
+              max-width: 247px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .last_content_right {
+          background-color: var(--color-secondary);
+          flex: 40%;
+          border-radius: 20px;
+
+          padding: 70px 40px;
+
+          display: flex;
+          flex-direction: column;
+          gap: 1.875rem;
+          align-items: center;
+
+          @include desktop-small {
+            padding: 70px 22px;
+          }
+
+          .top {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+
+            p {
+              text-align: center;
+              @include typography(text-lg, regular);
+              color: var(--color-text-dark);
+            }
+          }
+          .button {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            a {
+              color: var(--color-white);
+              text-decoration: none;
+              @include typography(text-lg, extra_bold);
+
+            }
+          }
+        }
+      }
+    }
+
+
+    .why_choose_card {
+      // flex: 33.33%;
+      display: flex;
+      // flex-direction: column;
       align-items: flex-start;
-      gap: 1.5rem;
+      gap: 1.25rem;
       cursor: pointer;
-      border-radius: 16px;
+      // border-radius: 16px;
       align-self: stretch;
       // opacity: 0;
       transition: transform 0.3s ease;
 
       @include desktop-small {
         width: 100%;
+        flex-direction: column;
       }
 
       .img_out{
         width: 100%;
+        flex: 60%;
         img{
           width: 100%;
         }
@@ -121,15 +331,19 @@
         align-items: center;
         align-self: stretch;
         position: relative;
-        padding: 1.875rem;
-        border-radius: 24px;
+        justify-content: space-between;
+        padding: 40px 30px 0;
+        border-radius: 20px;
         width: 100%;
-        gap: 42px;
+        gap: 12px;
         background: var(--color-secondary);
         flex-grow: 1;
 
+        flex: 40%;
+        
+
         @include desktop-small {
-          flex-direction: column;
+          // flex-direction: column;
           align-items: center;
           width: 100%;
         }
@@ -137,9 +351,9 @@
         .img_in {
           overflow: hidden;
           border-radius: 16px;
-          width: 100%;
+          // width: 100%;
 
-          @include desktop-small {
+          @include mobile {
             width: 100%;
           }
 
@@ -152,10 +366,10 @@
         .why_choose_content {
           display: flex;
           flex-direction: column;
-          gap: 83px;
-          justify-content: flex-start;
-          align-items: flex-start;
-          text-align: left;
+          gap: 12px;
+          justify-content: center;
+          align-items: center;
+          // text-align: center;
           width: 100%;
 
           @include tablet{
@@ -164,12 +378,13 @@
 
           .icon_head{
             display: flex;
-            flex-direction: column;
+            // flex-direction: column;
             gap: 12px;
-            justify-content: flex-start;
-            align-items: flex-start;
-            text-align: left;
+            // justify-content: flex-start;
+            // align-items: flex-start;
+            // text-align: left;
             width: 100%;
+            justify-content: center;
 
             // &:nth-child(2){
             //   flex-direction: row;
@@ -180,49 +395,63 @@
               height: auto
             }
             .head {
-              @include typography(display-md, medium);
+              @include typography(display-sm, semibold);
               color: var(--color-primary);
+              font-family: var(--secondary-font);
+              
             }
           }
         
         
           .desc {
-            @include typography(text-lg, normal);
+            @include typography(text-md, regular);
             color: var(--color-text-light);
+            text-align: center;
           }
         }
 
       }
 
-      &:nth-child(2){
-        gap: 0;
 
-        .why_choose_contents {
-          .img_in{
-            height: 406px;
-            @include desktop-small{
-              height: auto;
-            }
-           
-          }
-           
-          .why_choose_content{
-            gap: 42px;
+      &:nth-child(1),&:nth-child(3) {
+        flex-direction: row-reverse;
 
-            .icon_head{
-              flex-direction: row;
-              @include desktop-small{
-                flex-direction: column;
-              }
-
-            }
-          }
+        @include desktop-small {
+          flex-direction: column-reverse;
         }
+      }
+
+      &:nth-child(2){
+
+        @include desktop-small {
+          flex-direction: column-reverse;
+        }
+        // .why_choose_contents {
+        //   .img_in{
+        //     height: 406px;
+        //     @include desktop-small{
+        //       height: auto;
+        //     }
+           
+        //   }
+           
+        //   .why_choose_content{
+        //     gap: 42px;
+
+        //     .icon_head{
+        //       flex-direction: row;
+        //       @include desktop-small{
+        //         flex-direction: column;
+        //       }
+
+        //     }
+        //   }
+        // }
           
       }
 
       &:nth-child(3){
-        flex-direction: column-reverse;
+        // flex-direction: column-reverse;
       }
     }
 
