@@ -1,10 +1,15 @@
 .text-right {
   align-self: stretch;
   padding: $content-padding 0;
-  background: var(--text-bg);
+  background: var(--bg-body);
+  background-image: url(../../images/about-text-right-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
 
   @include desktop-small {
     padding: $content-padding-sm 0 !important;
+
+    background-image: none;
   }
 
   .text-right-container {
