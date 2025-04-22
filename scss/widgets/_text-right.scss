@@ -1,10 +1,15 @@
 .text-right {
   align-self: stretch;
   padding: $content-padding 0;
-  background: var(--text-bg);
+  background: var(--bg-body);
+  background-image: url(../../images/about-text-right-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
 
   @include desktop-small {
     padding: $content-padding-sm 0 !important;
+
+    background-image: none;
   }
 
   .text-right-container {
@@ -27,26 +32,35 @@
         display: flex;
         gap: 1rem;
 
-        img {
-          max-width: 614px;
-          width: 100%;
-        }
-
         @include desktop-small {
           flex-direction: column;
           align-items: center;
         }
 
+        img {
+          width: 40%;
+
+          @include desktop-small {
+            width: 100%;
+          }
+        }        
+
         .left {
           padding: 30px;
           border-radius: 24px;
-          background: var(--color-white);
+          background: var(--color-primary);
           border: 1px solid var(--color-tertiary);
           display: flex;
           flex-direction: column;
           gap: 1rem;
+          width: 60%;
+
+          @include desktop-small {
+            width: 100%;
+          }
 
           h4 {
+            color: var(--color-white);
             @include typography(display-xs, semibold);
             font-family: var(--secondary-font);
 
@@ -55,8 +69,13 @@
             }
           }
 
-          p {
-            @include typography(text-md, regular);
+          .text-right-btn {
+            text-decoration: none;
+            background: #fff;
+            color: var(--color-black);
+            padding: 12px 40px;
+            border-radius: 12px;
+            text-align: center;
           }
         }
 
@@ -82,18 +101,9 @@
         position: relative;
         h4 {
           margin-left: 38px;
-          @include typography(text-lg, semibold);
-
-          &::before {
-            content: " ";
-            position: absolute;
-            height: 3px;
-            width: 20px;
-            left: 0;
-            top: 45%;
-            background: var(--color-section-subtitle);
-            border-radius: var(--border-radius);
-          }
+          @include typography(display-lg, semibold);
+          color: var(--color-text-dark);
+   
         }
       }
 
@@ -159,6 +169,7 @@
           align-items: center;
           max-width: 100%;
         }
+
 
         h4 {
           @include typography(text-xl, medium);
