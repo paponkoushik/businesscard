@@ -3,9 +3,9 @@
 {% set module = page.header.offer %}
 {% block render_block %}
 
-	{% set left_bg = page.find('/home').header.offer.offer_img_bg %}
+	{% set left_bg = page.media[page.find('/home').header.offer.offer_img_bg].url ?? '' %}
 
-	<div class="offer offer_bottom_in_home" style="{% if(left_bg) %}background-image: url('{{ left_bg }}'){% endif %}">
+	<div class="offer offer_bottom_in_home" style="{% if left_bg %}background-image: url('{{ left_bg }}'){% endif %}">
 		<div class="container">
 			<div class="offer-text">
 
