@@ -12,7 +12,7 @@
   z-index: 10;
 
   @include desktop-small {
-    // position: fixed;
+    position: fixed;
     z-index: 3;
     padding: 20px 0;
     background: var(--color-secondary);

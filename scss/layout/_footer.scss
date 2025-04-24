@@ -51,10 +51,11 @@
     }
 
     p {
-      @include typography(text-xl, regular);
-      @include desktop-small {
-        @include typography(text-md, semibold);
-      }
+      @include typography(text-lg, regular);
+
+      // @include desktop-small {
+      //   @include typography(text-md, semibold);
+      // }
       padding: 6px 0;
       color: var(--panel-footer-text);
     }
@@ -446,6 +447,7 @@
 
     p{
       color: var(--color-white);
+      @include typography(text-md, regular);
 
       @include desktop-small{
         @include typography(text-lg, regular);

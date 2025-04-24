@@ -150,6 +150,10 @@
               max-width: 330px;
               width: 100%;
               text-align: center;
+
+              @include desktop-small{
+                @include typography(display-xs, semibold);
+              }
             }
 
             h6 {
@@ -159,6 +163,10 @@
               max-width: 330px;
               width: 100%;
               text-align: center;
+
+              @include desktop-small{
+                @include typography(text-lg, semibold);
+              }
             }
           }
         }
@@ -234,6 +242,7 @@
             }
             @include desktop-small {
               text-align: center;
+              @include typography(text-md, regular);
             }
           }
 
