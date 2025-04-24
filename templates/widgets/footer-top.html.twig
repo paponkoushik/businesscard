@@ -1,11 +1,10 @@
 {% extends 'partials/variables.html.twig' %}
 
-{% set module = page.header.offer %}
+{% set module = page.find('/home').header.offer %}
+
 {% block render_block %}
 
-	{% set left_bg = page.media[page.find('/home').header.offer.offer_img_bg].url ?? '' %}
-
-	<div class="offer offer_bottom_in_home" style="{% if left_bg %}background-image: url('{{ left_bg }}'){% endif %}">
+	<div class="offer offer_bottom_in_home" >
 		<div class="container">
 			<div class="offer-text">
 
@@ -15,7 +14,7 @@
                         {{ page.find('/home').header.offer.h1.translatable }}
 					</h1>
 
-					<p class="">{{ page.find('/home').header.offer.text.translatable }}</p>
+					<p class="">{{ page.find('/').header.offer.text.translatable }}</p>
 
 					{% for button in module.buttons  %}
 						<a class="button " href="{{ button.link }}">
