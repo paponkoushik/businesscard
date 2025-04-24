@@ -1,0 +1,65 @@
+{% extends 'partials/variables.html.twig' %}
+
+{% set contents = page.header.contents %}
+{% block render_block %}
+
+  <style>
+    swiper-container {
+      width: 300px;
+      height: 500px;
+    }
+
+    swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+  </style>
+
+	{% set left_bg = page.media[page.header.offer.offer_img_bg].url ?? '' %}
+
+	<div class="swiper-suffle-section {{ module.offer_parent_class }}" style="{% if(left_bg) %}background-image: url('{{ left_bg }}'){% endif %}">
+		<div class="container">
+			<div class="offer-text">
+
+
+                <div class="offer-image" >
+
+                    <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+
+                        {% for item in contents.images %}
+                        <swiper-slide>
+                        
+                            <img class="slider-img" width="100%" src="{{ page.media[item.img].url }}" alt="Swiper Image"/>
+
+                        </swiper-slide>
+                        {% endfor %}
+
+                    </swiper-container>
+
+                    <span>
+                    
+                    <img src="{{ url('theme://images/hand-animation.gif') }}" />
+                    
+                    </span>
+                </div>
+
+				<div class="offer-content"> 
+					<h1 class="offer-title">
+						{{ contents.title.translatable|striptags('<span>')|raw }}
+					</h1>
+
+					<p class="">{{ contents.brief.translatable }}</p>
+				</div>
+
+				
+			</div>
+
+		</div>
+	</div>
+{% endblock %}
