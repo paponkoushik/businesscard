@@ -57,6 +57,7 @@
 
           @include desktop-small {
             width: 100%;
+            text-align: center;
           }
 
           h4 {
@@ -188,5 +189,19 @@
         }
       }
     }
+  }
+}
+
+.text-right-desktop-view {
+  @include desktop-small {
+    display: none;
+  }
+}
+
+.text-right-mobile-view {
+  display: none;
+  
+  @include desktop-small {
+    display: block;
   }
 }
