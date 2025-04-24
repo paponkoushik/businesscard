@@ -32,29 +32,12 @@
       display: none;
     }
 
-    // h3 {
-    //   @include typography(display-xs, medium);
-    //   color: var(--color-primary);
-    //   text-align: center;
-    // }
-    // h1 {
-    //   @include typography(display-xl, medium);
-    //   text-align: center;
-    //   @include desktop-small {
-    //     @include typography(display-sm, medium);
-    //   }
-    // }
   }
 }
 
 .contact-block-section {
 
-  // display: flex;
-  // flex-direction: column;
-
-  padding: 5.625rem 0;
-  
-  // position: relative;
+  padding: 0 0 5.625rem 0;  
   background: var(--color-secondary); 
   display: flex;
   flex-direction: column;

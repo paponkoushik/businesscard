@@ -6,9 +6,7 @@
   background-color: var(--color-secondary);
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(24, 24, 24, 0.00) 0%, #181818 100%);
 
-  background-image: url(../../images/offer_btm_bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -214,7 +212,6 @@
   max-width: unset;
 
   @include desktop-small{
-    flex-direction: column;
     gap: 16px;
   }
 
@@ -233,7 +230,12 @@
     align-items: center;
     text-align: center;
     gap: 24px;
-    max-width: 70%;
+    width: 70%;
+
+    @include desktop-small {
+
+      width: 100%;
+    }
 
     .offer-title{
      
@@ -243,6 +245,7 @@
 
       @include desktop-small{
         @include typography(display-md, bold);
+        text-align: center;
       }
 
       span{
@@ -257,4 +260,18 @@
     }
   }
 
+}
+
+.offer-img-desktop-view {
+  @include desktop-small {
+    display: none;
+  }
+}
+
+.offer-img-mobile-view {
+  display: none;
+
+  @include desktop-small {
+    display: block;
+  }
 }
