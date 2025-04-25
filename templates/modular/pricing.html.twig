@@ -57,7 +57,14 @@
             <p>{{ page.content|raw }}</p>
             <div class="pricing-sub-title">
                 <h5>{{ page.header.sub_title.translatable }}</h5>
-                <img src="{{ url('theme://images/pricing/pricing_image.svg') }}"/>
+
+                <div class="avatar-row">
+                    {% for i in 1..6 %}
+                        <div class="avatar-wrapper">
+                            <img src="{{ url('theme://images/pricing/i' ~ i ~ '.svg') }}" alt="Avatar {{ i }}" />
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
             
         </div>
