@@ -142,7 +142,7 @@
       align-self: stretch;
       border-radius: 24px;
       // border: 1px solid var(--border-color);
-      background: var(--color-white);
+      background: transparent;
       opacity: 0;
       // padding-bottom: 30px;
 
@@ -281,6 +281,9 @@
               // @include desktop-small {
               //   @include typography(display-sm, medium);
               // }
+              .type-wrap {
+                font-size: 1.875rem;
+              }
             }
 
             .pricing-group {
@@ -349,6 +352,9 @@
                   gap: 5px !important;
                 }
 
+                .trial-days{
+                  height: unset !important;
+                }
                 .trial-days, .trial{
                   @include typography(text-xl, extra_bold);
 

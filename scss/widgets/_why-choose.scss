@@ -165,7 +165,7 @@
               text-align: center;
 
               @include desktop-small{
-                @include typography(text-lg, semibold);
+                @include typography(text-lg, bold);
               }
             }
           }

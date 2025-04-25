@@ -17,7 +17,7 @@
 					<p class="">{{ page.find('/').header.offer.text.translatable }}</p>
 
 					{% for button in module.buttons  %}
-						<a class="button " href="{{ button.link }}">
+						<a class="button " href="{{ url(grav.language.getActive ~ '/' ~ button.link) }}">
 
 							<span>{{ button.text.translatable|striptags('</br>')|raw }}</span>
 							
