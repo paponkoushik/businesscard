@@ -143,7 +143,7 @@
         @include typography(display-2xl,bold);
         @include mobile {
           font-style: normal;
-          @include typography(display-lg,bold);
+          @include typography(display-md, bold);
         }
         -webkit-text-fill-color: unset;
         color: var(--hero-title);

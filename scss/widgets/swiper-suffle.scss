@@ -80,6 +80,15 @@
                 }
             }  
           }
+
+          swiper-container {
+            @include desktop-small {
+              width: 200px; 
+              height: 350px;
+            }
+          }
+
+          
   
         }
   
