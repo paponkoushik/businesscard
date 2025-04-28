@@ -67,21 +67,19 @@
             
           }
   
-  
           span{
             img {
                 position: absolute;
                 bottom: 5%;
                 right: -56px;
-
     
                 @include desktop-small{
-                bottom: -33%;
-                right: 25%;
+                    bottom: -33%;
+                    right: 42%;
+                    width: 100px;
                 }
             }  
           }
-
   
         }
   

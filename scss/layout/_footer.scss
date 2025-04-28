@@ -358,8 +358,6 @@
           font-family: var(--secondary-font);
           color: var(--color-text-dark);
           @include typography(display-lg, bold);
-          // max-width: 475px;
-          // -webkit-text-fill-color: unset;
           @include desktop-small{
             @include typography(display-md, semibold);
           }
@@ -399,16 +397,6 @@
           border-radius: 12px;
           position: relative;
           color: var(--color-black);
-  
-          // span {
-          //   color: var(--color-white);
-          // }
-          // svg {
-          //   position: absolute;
-          //   right: 5px;
-            
-          // }
-           
         }
       }
 
@@ -418,7 +406,7 @@
 }
 
 .footer_top_bottom_in_home {
-  padding: 260px 100px;
+  padding: 100px 0 300px 0;
 
   @include desktop-small{
     background-position: center;

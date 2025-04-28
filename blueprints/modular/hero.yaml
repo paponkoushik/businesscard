@@ -40,6 +40,22 @@ form:
                   type: textarea
                   label: Hero Text
                   classes: 'translatable'
+
+                header.hero.subtitle_1.translatable:
+                  type: text
+                  label: Subtitle 1
+                  classes: 'translatable'
+
+                header.hero.subtitle_2.translatable:
+                  type: text
+                  label: Subtitle 2
+                  classes: 'translatable'
+
+                header.hero.subtitle_3.translatable:
+                  type: text
+                  label: Subtitle 3
+                  classes: 'translatable'
+
                 header.hero.image:
                     type: pagemediaselect
                     label: Hero image
