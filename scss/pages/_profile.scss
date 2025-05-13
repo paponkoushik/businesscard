@@ -48,18 +48,9 @@
       text-align: center;
       width:fit-content;
       
-
-      // background: var(--color-primary);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
-
-      // display: flex;
-
-
-      // border: 1px solid var(--color-primary);
-
-      // align-items: center;
-      // justify-content: space-between;
+      @include desktop-small {
+        width: 100%;
+      }
 
     }
 
