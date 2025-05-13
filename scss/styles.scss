@@ -55,7 +55,7 @@
 @import 'animations/animations';
 
 .container {
-	max-width: 1344px;
+	max-width: 1440px;
 	margin: 0 auto;
 	width: 100%;
 	@include padding(padding-lg);
@@ -402,3 +402,11 @@ ol, ul {
 // 		background: transparent;
 // 	}
 // }
+
+video::-webkit-media-controls-volume-slider {
+	display:none;
+}
+	
+video::-webkit-media-controls-mute-button {
+	display:none;
+}

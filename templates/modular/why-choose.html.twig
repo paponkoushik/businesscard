@@ -36,6 +36,7 @@
 
                     <div class="why_choose_contents">
                         {% set img_in = page.media[why_choose.image_inside] %}
+                        {% set img_in_mobile = page.media[why_choose.image_inside_mobile] %}
                         <div class="why_choose_content">
                             {# {% set icon = page.media[why_choose.icon] %} #}
                             <div class="icon_head">
@@ -47,7 +48,8 @@
                         </div>
                         {% if img_in != '' %}
                             <div class="img_in">
-                                <img class="" src="{{ img_in.url }}"/>
+                                <img class="why-choose-desktop-img" src="{{ img_in.url }}"/>
+                                <img class="why-choose-mobile-img" src="{{ img_in_mobile.url }}"/>
                             </div>
                          {% endif %}
                     </div>

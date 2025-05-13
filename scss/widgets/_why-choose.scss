@@ -370,6 +370,20 @@
             width: 100%;
             height: 100%;
           }
+
+          .why-choose-desktop-img {
+            @include desktop-small {
+              display: none;
+            }
+          }
+
+          .why-choose-mobile-img {
+            display: none;
+
+            @include desktop-small {
+              display: block;
+            }
+          }
         }
 
         .why_choose_content {

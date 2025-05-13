@@ -79,6 +79,9 @@ form:
                     .image_inside:
                       type: pagemediaselect
                       label: Image Inside
+                    .image_inside_mobile:
+                      type: pagemediaselect
+                      label: Image Inside Mobile
                     .image_outside:
                       type: pagemediaselect
                       label: Image Outside
