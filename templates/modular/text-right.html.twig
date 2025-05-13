@@ -3,6 +3,7 @@
 {% set module = page.header.text_right %}
 {% set image = page.media[page.header.text_right.image] %}
 {% set small_image = page.media[page.header.text_right_small.image] %}
+{% set small_image_mobile = page.media[page.header.text_right_small.image_mobile] %}
 
 {% block render_block %}
     <div class="paragraph text-right text-right-animation {{ module.classes }}">
@@ -23,7 +24,8 @@
                         <a href="{{ home_url|e }}{{ webdata('signup_url') }}" class="text-right-btn">{{ module.left_btn_text.translatable }}</a>
                     </div>
 
-                    <img class="" src="{{ small_image.url }}" alt="icon"/>
+                    <img class="desktop-small-img" src="{{ small_image.url }}" alt="icon"/>
+                    <img class="mobile-small-img" src="{{ small_image_mobile.url }}" alt="icon"/>
 
                 </div>
 

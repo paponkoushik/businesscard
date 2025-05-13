@@ -28,9 +28,12 @@
 
                 <div class="why_choose_card">
                     {% set img_out = page.media[why_choose.image_outside] %}
+                    {% set img_out_mobile = page.media[why_choose.image_outside_mobile] %}
+
                     {% if img_out != '' %}
                         <div class="img_out">
-                            <img class="" src="{{ img_out.url }}"/>
+                            <img class="desktop-out-img" src="{{ img_out.url }}"/>
+                            <img class="mobile-out-img" src="{{ img_out_mobile.url }}"/>
                         </div>
                     {% endif %}
 

@@ -49,6 +49,12 @@ form:
               label: Small image left
               preview_images: true
 
+            header.text_right_small.image_mobile:
+              type: pagemediaselect
+              label: Small image left Mobile
+              preview_images: true
+
+
             header.text_right.left_title.translatable:
               type: text
               label: Left Title

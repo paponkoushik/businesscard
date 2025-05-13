@@ -29,7 +29,7 @@
 				<a class="menu-item__link  btn button login" href="{{ url('/login') }}">{{ "METRICALO.LOGIN"|t }}</a>
 			</div>
 			<div class="menu-item">
-				<a class="menu-item__link  button btn signup" href="{{ webdata('signup_url') }}">
+				<a class="menu-item__link  button btn signup" href="{{ home_url|e }}{{ webdata('signup_url') }}">
 				
 					<span>{{ "METRICALO.SIGNUP"|t }}</span>
 

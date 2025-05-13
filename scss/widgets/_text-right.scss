@@ -43,7 +43,21 @@
           @include desktop-small {
             width: 100%;
           }
-        }        
+        }
+        
+        .desktop-small-img {
+          @include desktop-small {
+            display: none;
+          }
+        }
+
+        .mobile-small-img {
+          display: none;
+          
+          @include desktop-small {
+            display: block;
+          }
+        }
 
         .left {
           padding: 30px;

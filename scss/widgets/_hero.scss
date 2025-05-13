@@ -117,7 +117,7 @@
       .hero_subtitle{
         display: flex;
         gap: 10px;
-
+        
         p{
           @include typography(text-xl, regular);
 

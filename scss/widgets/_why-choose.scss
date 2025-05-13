@@ -332,6 +332,23 @@
         img{
           width: 100%;
         }
+
+        .desktop-out-img {
+          @include desktop-small {
+            display: none;
+          }
+        }
+
+        .mobile-out-img {
+          display: none;
+
+          @include desktop-small {
+            display: block;
+          }
+        }
+
+
+
       }
 
       .why_choose_contents{
