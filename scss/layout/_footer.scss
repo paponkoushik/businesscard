@@ -195,39 +195,18 @@
 
     @include desktop-small{
       margin-top: 0;
-      padding: 2.5rem 1rem;
+      padding: 2.5rem 0rem;
     }
     p {
       color: var(--color-white);
-      @include typography(text-md, regular);
+      @include typography(text-lg, regular);
+      
       @include desktop-small {
-        @include typography(text-xs, regular);
+        @include typography(text-lg, regular);
       }
       text-align: left;
 
     }
-
-    .policy-pages-link-area {
-      .copyright-link {
-        border-right: 1px solid var(--color-white);
-        padding-right: 60px;
-        color: var(--color-white);
-        
-        @include typography(text-md, regular);
-
-        &:last-child {
-          border-right: none;
-          padding-right: 0;
-          padding-left: 60px;
-
-        }
-
-        @include desktop-small {
-          @include typography(text-xs, regular);
-        }
-      }
-    }
-
     
   }
 }
@@ -445,3 +424,31 @@
 
   }
 }
+
+
+.copyright-desktop-view {
+  @include desktop-small {
+   display: none;
+  }
+ }
+ .copyright-mobile-view {
+   display: none;
+ 
+   @include desktop-small {
+     display: block;
+   }
+ }
+ 
+ .footer-card-mobile-view {
+   display: none;
+ 
+   @include desktop-small {
+     display: block;
+   }
+ }
+ 
+ .footer-card-desktop-view {
+   @include desktop-small {
+     display: none;
+   }
+ }
