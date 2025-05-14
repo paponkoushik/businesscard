@@ -2,16 +2,19 @@
 .unsubscribe-section { 
     margin: 0 !important;
 }
-{# #username {
-    position: relative;
-}
 
-#username::before {
-    content: "{{ 'METRICALO.EMAIL'|t }}";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-} #}
+.login-form {
+    .form-field {
+        &:first-child {
+            &::before {
+                content: "{{ 'METRICALO.EMAIL'|t }} {{ 'METRICALO.ADDRESS'|t }}";
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                content: "{{ 'METRICALO.PASSWORD'|t }}";
+            }
+        }
+    }
+}
