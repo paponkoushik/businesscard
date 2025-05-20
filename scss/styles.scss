@@ -410,3 +410,41 @@ video::-webkit-media-controls-volume-slider {
 video::-webkit-media-controls-mute-button {
 	display:none;
 }
+
+
+/* For the scrollbar track (the background area) */
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+	border-radius: 24px; /* Optional: Rounded corners for the track */
+	margin-top: 14px;
+}
+
+/* For the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 24px; /* Optional: Rounded corners for the thumb */
+	border: 2px solid transparent; /* Optional: Add some spacing/border */
+	background-clip: content-box; /* Make border inside padding */
+	
+}
+
+/* Hover effect on the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* For the corners where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  background-color: transparent; /* Or any color you prefer */
+}
+
+/* For the resizing handle (if present) */
+::-webkit-resizer {
+  background-color: #ddd;
+}
+
+/* Style the scrollbar as a whole */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the vertical scrollbar */
+  height: 10px; /* Height of the horizontal scrollbar */
+}
